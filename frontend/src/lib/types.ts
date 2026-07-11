@@ -70,3 +70,22 @@ export interface AgentLog {
   timestamp: string;
   details?: string;
 }
+
+export interface AgentStatus {
+  id: string;
+  name: string;
+  department: string;
+  port: number;
+  homeDir: string;
+  description: string;
+  status: "running" | "stopped";
+  soulPreview: string;
+  logs: LogEntry[];
+}
+
+export interface LogEntry {
+  timestamp: string;
+  message: string;
+  level: "info" | "warn" | "error";
+  agent?: string;
+}

@@ -1,9 +1,9 @@
 "use client";
 
+import { useState, useEffect, useCallback } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { mockAgents, mockAgentLogs } from "@/lib/mock-data";
 import {
   Bot,
   Play,
@@ -16,15 +16,18 @@ import {
   Loader2,
   Activity,
   Settings,
+  FileEdit,
+  X,
+  Save,
+  RefreshCw,
+  Trash2,
+  Copy,
 } from "lucide-react";
-import { useState } from "react";
+import type { AgentStatus, LogEntry } from "@/lib/types";
 
 const statusConfig = {
-  active: { icon: CheckCircle2, color: "text-phosphor", bg: "bg-phosphor/10" },
-  idle: { icon: Clock, color: "text-smoke", bg: "bg-smoke/10" },
-  running: { icon: Loader2, color: "text-phosphor", bg: "bg-phosphor/10" },
-  error: { icon: AlertCircle, color: "text-red-500", bg: "bg-red-500/10" },
-  paused: { icon: Pause, color: "text-yellow-500", bg: "bg-yellow-500/10" },
+  running: { icon: CheckCircle2, color: "text-phosphor", bg: "bg-phosphor/10", label: "Running" },
+  stopped: { icon: Pause, color: "text-smoke", bg: "bg-smoke/10", label: "Stopped" },
 };
 
 const departmentColors = {
@@ -34,20 +37,97 @@ const departmentColors = {
   "customer-brand": "bg-phosphor/10 text-phosphor border-phosphor/20",
 };
 
-const resultConfig = {
-  success: { icon: CheckCircle2, color: "text-phosphor" },
-  error: { icon: AlertCircle, color: "text-red-500" },
-  warning: { icon: AlertCircle, color: "text-yellow-500" },
+const icons: Record<string, string> = {
+  brain: "🧠",
+  storeops: "📦",
+  marketing: "📣",
+  customer: "💬",
+};
+
+const levelColors: Record<string, string> = {
+  info: "text-phosphor",
+  warn: "text-yellow-500",
+  error: "text-red-500",
 };
 
 export default function AgentsPage() {
-  const [filter, setFilter] = useState<string>("all");
+  const [agents, setAgents] = useState<AgentStatus[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [actionId, setActionId] = useState<string | null>(null);
+  const [editingSoul, setEditingSoul] = useState<string | null>(null);
+  const [soulContent, setSoulContent] = useState("");
+  const [soulSaving, setSoulSaving] = useState(false);
+  const [allLogs, setAllLogs] = useState<LogEntry[]>([]);
 
-  const departments = ["all", "storeops", "marketing", "customer-brand"];
-  const filtered = filter === "all" ? mockAgents : mockAgents.filter((a) => a.department === filter);
+  const fetchAgents = useCallback(async () => {
+    try {
+      const res = await fetch("/api/agents");
+      const data = await res.json();
+      setAgents(data.agents || []);
+      const logs = (data.agents || []).flatMap((a: AgentStatus) =>
+        a.logs.map((l: LogEntry) => ({ ...l, agent: a.name }))
+      );
+      logs.sort((a: LogEntry, b: LogEntry) =>
+        new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
+      );
+      setAllLogs(logs.slice(0, 50));
+    } catch {}
+    setLoading(false);
+  }, []);
 
-  const totalTokens = mockAgents.reduce((sum, a) => sum + a.tokensUsed, 0);
-  const activeAgents = mockAgents.filter((a) => a.status === "active" || a.status === "running").length;
+  useEffect(() => {
+    fetchAgents();
+    const interval = setInterval(fetchAgents, 10000);
+    return () => clearInterval(interval);
+  }, [fetchAgents]);
+
+  const handleAction = async (agentId: string, action: "start" | "stop") => {
+    setActionId(agentId);
+    try {
+      await fetch(`/api/agents/${agentId}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action }),
+      });
+      await fetchAgents();
+    } catch {}
+    setActionId(null);
+  };
+
+  const openSoulEditor = async (agentId: string) => {
+    try {
+      const res = await fetch(`/api/agents/${agentId}/soul`);
+      const data = await res.json();
+      setSoulContent(data.content || "");
+      setEditingSoul(agentId);
+    } catch {}
+  };
+
+  const saveSoul = async (restart: boolean) => {
+    if (!editingSoul) return;
+    setSoulSaving(true);
+    try {
+      await fetch(`/api/agents/${editingSoul}/soul`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ content: soulContent }),
+      });
+      if (restart) {
+        await handleAction(editingSoul, "stop");
+        await new Promise((r) => setTimeout(r, 2000));
+        await handleAction(editingSoul, "start");
+      }
+      setEditingSoul(null);
+    } catch {}
+    setSoulSaving(false);
+  };
+
+  const copySoul = () => {
+    navigator.clipboard.writeText(soulContent);
+  };
+
+  const totalTokens = agents.reduce((sum, a) => sum + (a.status === "running" ? 5000 : 0), 0);
+  const activeAgents = agents.filter((a) => a.status === "running").length;
 
   return (
     <div className="p-6 space-y-6">
@@ -55,21 +135,29 @@ export default function AgentsPage() {
         <div>
           <h1 className="text-2xl font-medium text-snow">Agents</h1>
           <p className="text-sm text-silver mt-1">
-            {mockAgents.length} agents · {activeAgents} active · {(totalTokens / 1000).toFixed(1)}K tokens today
+            {agents.length} agents · {activeAgents} running · Live status (10s refresh)
           </p>
         </div>
-        <Button variant="outline" className="border-charcoal text-silver rounded-full">
-          <Settings className="w-4 h-4 mr-2" />
-          Configure
-        </Button>
+        <div className="flex gap-2">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={fetchAgents}
+            className="border-charcoal text-silver rounded-full"
+          >
+            <RefreshCw className="w-4 h-4 mr-1" />
+            Refresh
+          </Button>
+        </div>
       </div>
 
+      {/* Stats */}
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
         {[
-          { label: "Total Agents", value: mockAgents.length.toString(), icon: Bot },
-          { label: "Active Now", value: activeAgents.toString(), icon: Activity },
-          { label: "Runs Today", value: mockAgents.reduce((s, a) => s + a.runsToday, 0).toString(), icon: RotateCcw },
-          { label: "Tokens Used", value: `${(totalTokens / 1000).toFixed(1)}K`, icon: Zap },
+          { label: "Total Agents", value: agents.length.toString(), icon: Bot },
+          { label: "Running", value: activeAgents.toString(), icon: Activity },
+          { label: "Stopped", value: (agents.length - activeAgents).toString(), icon: Clock },
+          { label: "Logs", value: allLogs.length.toString(), icon: Zap },
         ].map((stat) => {
           const Icon = stat.icon;
           return (
@@ -84,118 +172,179 @@ export default function AgentsPage() {
         })}
       </div>
 
-      <div className="flex gap-2">
-        {departments.map((dept) => (
-          <Button
-            key={dept}
-            variant={filter === dept ? "default" : "outline"}
-            size="sm"
-            onClick={() => setFilter(dept)}
-            className={
-              filter === dept
-                ? "bg-phosphor text-obsidian rounded-full"
-                : "border-charcoal text-silver hover:bg-ash rounded-full"
-            }
-          >
-            {dept === "all" ? "All" : dept === "customer-brand" ? "Customer/Brand" : dept.charAt(0).toUpperCase() + dept.slice(1)}
-          </Button>
-        ))}
+      {/* Agent Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {agents.map((agent) => {
+          const config = statusConfig[agent.status];
+          const Icon = config.icon;
+          return (
+            <Card key={agent.id} className="bg-obsidian border-charcoal rounded-2xl p-4">
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-2">
+                  <span className="text-lg">{icons[agent.id]}</span>
+                  <span className="text-sm font-medium text-snow">{agent.name}</span>
+                </div>
+                <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full ${config.bg}`}>
+                  <div className={`w-1.5 h-1.5 rounded-full ${agent.status === "running" ? "bg-phosphor animate-pulse" : "bg-smoke"}`} />
+                  <span className={`text-xs ${config.color}`}>{config.label}</span>
+                </div>
+              </div>
+              <p className="text-xs text-smoke mb-1">{agent.description}</p>
+              <p className="text-xs text-graphite mb-3">Port: {agent.port}</p>
+              <div className="flex gap-2">
+                {agent.status === "running" ? (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => handleAction(agent.id, "stop")}
+                    disabled={actionId === agent.id}
+                    className="flex-1 border-charcoal text-yellow-500 hover:text-yellow-400 rounded-full text-xs"
+                  >
+                    {actionId === agent.id ? (
+                      <Loader2 className="w-3 h-3 animate-spin" />
+                    ) : (
+                      <Pause className="w-3 h-3 mr-1" />
+                    )}
+                    Stop
+                  </Button>
+                ) : (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => handleAction(agent.id, "start")}
+                    disabled={actionId === agent.id}
+                    className="flex-1 border-charcoal text-phosphor hover:text-mint rounded-full text-xs"
+                  >
+                    {actionId === agent.id ? (
+                      <Loader2 className="w-3 h-3 animate-spin" />
+                    ) : (
+                      <Play className="w-3 h-3 mr-1" />
+                    )}
+                    Start
+                  </Button>
+                )}
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => openSoulEditor(agent.id)}
+                  className="border-charcoal text-silver hover:text-snow rounded-full text-xs"
+                >
+                  <FileEdit className="w-3 h-3 mr-1" />
+                  SOUL
+                </Button>
+              </div>
+            </Card>
+          );
+        })}
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2">
-          <Card className="bg-obsidian border-charcoal rounded-2xl">
+      {/* Activity Log */}
+      <Card className="bg-obsidian border-charcoal rounded-2xl">
+        <div className="p-4 border-b border-charcoal flex items-center justify-between">
+          <h2 className="text-lg font-medium text-snow">Activity Log</h2>
+          <span className="text-xs text-smoke">{allLogs.length} entries</span>
+        </div>
+        <div className="max-h-80 overflow-y-auto">
+          {allLogs.length === 0 ? (
+            <div className="p-8 text-center text-smoke text-sm">
+              No activity logs yet. Logs appear when agents perform actions.
+            </div>
+          ) : (
             <div className="divide-y divide-charcoal">
-              {filtered.map((agent) => {
-                const config = statusConfig[agent.status];
-                const Icon = config.icon;
-                return (
-                  <div key={agent.id} className="p-4 hover:bg-ash/30 transition-colors">
-                    <div className="flex items-start justify-between">
-                      <div className="flex items-start gap-3">
-                        <div className={`mt-0.5 p-2 rounded-xl ${config.bg}`}>
-                          <Icon
-                            className={`w-4 h-4 ${config.color} ${agent.status === "running" ? "animate-spin" : ""}`}
-                          />
-                        </div>
-                        <div>
-                          <div className="flex items-center gap-2 mb-1">
-                            <span className="text-sm font-medium text-snow">{agent.name}</span>
-                            <Badge variant="outline" className={`rounded-full ${departmentColors[agent.department]}`}>
-                              {agent.department}
-                            </Badge>
-                            <Badge variant="outline" className="text-xs border-charcoal text-smoke rounded-full">
-                              {agent.type}
-                            </Badge>
-                          </div>
-                          <p className="text-xs text-smoke mb-2">{agent.description}</p>
-                          <div className="flex gap-4 text-xs text-smoke">
-                            {agent.schedule && (
-                              <span className="flex items-center gap-1">
-                                <Clock className="w-3 h-3" /> {agent.schedule}
-                              </span>
-                            )}
-                            {agent.lastRun && (
-                              <span>Last: {agent.lastRun}</span>
-                            )}
-                            <span>{agent.runsToday} runs today</span>
-                            <span>{(agent.tokensUsed / 1000).toFixed(1)}K tokens</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="flex gap-1">
-                        {agent.status === "paused" ? (
-                          <Button variant="ghost" size="sm" className="h-7 text-phosphor hover:text-mint">
-                            <Play className="w-3 h-3" />
-                          </Button>
-                        ) : (
-                          <Button variant="ghost" size="sm" className="h-7 text-yellow-400 hover:text-yellow-300">
-                            <Pause className="w-3 h-3" />
-                          </Button>
-                        )}
-                        <Button variant="ghost" size="sm" className="h-7 text-smoke hover:text-snow">
-                          <Settings className="w-3 h-3" />
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
+              {allLogs.map((log, i) => (
+                <div key={i} className="px-4 py-2 flex items-start gap-3">
+                  <span className="text-xs text-graphite mt-0.5 w-36 shrink-0">
+                    {new Date(log.timestamp).toLocaleTimeString()}
+                  </span>
+                  <Badge
+                    variant="outline"
+                    className={`text-[10px] rounded-full shrink-0 ${
+                      log.level === "error"
+                        ? "border-red-500/20 text-red-500"
+                        : log.level === "warn"
+                        ? "border-yellow-500/20 text-yellow-500"
+                        : "border-phosphor/20 text-phosphor"
+                    }`}
+                  >
+                    {log.level}
+                  </Badge>
+                  <span className="text-xs text-silver">
+                    <span className="font-medium text-snow">{log.agent || "System"}</span>: {log.message}
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </Card>
+
+      {/* SOUL.md Editor Modal */}
+      {editingSoul && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+          <Card className="w-full max-w-2xl mx-4 bg-obsidian border-charcoal rounded-2xl overflow-hidden">
+            <div className="p-4 border-b border-charcoal flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <FileEdit className="w-5 h-5 text-phosphor" />
+                <h2 className="text-lg font-medium text-snow">
+                  Edit {agents.find((a) => a.id === editingSoul)?.name} System Prompt
+                </h2>
+              </div>
+              <button onClick={() => setEditingSoul(null)} className="text-smoke hover:text-snow">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="p-4">
+              <textarea
+                value={soulContent}
+                onChange={(e) => setSoulContent(e.target.value)}
+                className="w-full h-96 bg-ash border border-slate text-snow rounded-2xl p-4 text-sm font-mono resize-none focus:outline-none focus:border-phosphor"
+                placeholder="# Agent System Prompt"
+                spellCheck={false}
+              />
+              <p className="text-xs text-smoke mt-2">
+                Changes take effect after agent restart.
+              </p>
+            </div>
+            <div className="p-4 border-t border-charcoal flex items-center justify-between">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={copySoul}
+                className="text-smoke hover:text-snow"
+              >
+                <Copy className="w-4 h-4 mr-1" />
+                Copy
+              </Button>
+              <div className="flex gap-2">
+                <Button
+                  variant="outline"
+                  onClick={() => setEditingSoul(null)}
+                  className="border-charcoal text-silver rounded-full"
+                >
+                  Cancel
+                </Button>
+                <Button
+                  onClick={() => saveSoul(false)}
+                  disabled={soulSaving}
+                  variant="outline"
+                  className="border-charcoal text-silver rounded-full"
+                >
+                  {soulSaving ? <Loader2 className="w-4 h-4 animate-spin mr-1" /> : <Save className="w-4 h-4 mr-1" />}
+                  Save
+                </Button>
+                <Button
+                  onClick={() => saveSoul(true)}
+                  disabled={soulSaving}
+                  className="bg-phosphor hover:bg-mint text-obsidian rounded-full font-medium"
+                >
+                  {soulSaving ? <Loader2 className="w-4 h-4 animate-spin mr-1" /> : <RotateCcw className="w-4 h-4 mr-1" />}
+                  Save & Restart
+                </Button>
+              </div>
             </div>
           </Card>
         </div>
-
-        <div>
-          <Card className="bg-obsidian border-charcoal rounded-2xl">
-            <div className="p-4 border-b border-charcoal">
-              <h2 className="text-lg font-medium text-snow">Activity Log</h2>
-            </div>
-            <div className="divide-y divide-charcoal">
-              {mockAgentLogs.map((log) => {
-                const config = resultConfig[log.result];
-                const Icon = config.icon;
-                return (
-                  <div key={log.id} className="p-3">
-                    <div className="flex items-start gap-2">
-                      <Icon className={`w-3 h-3 mt-1 ${config.color}`} />
-                      <div>
-                        <div className="flex items-center gap-2 mb-0.5">
-                          <span className="text-xs font-medium text-snow">{log.agentName}</span>
-                          <span className="text-xs text-graphite">{log.timestamp}</span>
-                        </div>
-                        <p className="text-xs text-silver">{log.action}</p>
-                        {log.details && (
-                          <p className="text-xs text-smoke mt-1">{log.details}</p>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </Card>
-        </div>
-      </div>
+      )}
     </div>
   );
 }
