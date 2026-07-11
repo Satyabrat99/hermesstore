@@ -1,0 +1,79 @@
+2026-07-12 02:02:48,034 INFO gateway.run: Starting Hermes Gateway...
+2026-07-12 02:02:48,037 INFO gateway.run: Session storage: C:\Users\satya\HermesStore\.hermes-customer\sessions
+2026-07-12 02:02:48,043 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-07-12 02:02:48,046 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-07-12 02:02:48,069 WARNING gateway.run: No env user allowlists configured. Messaging platforms default to pairing/allowlist policies and will deny unknown senders unless you configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id) or explicitly opt in with GATEWAY_ALLOW_ALL_USERS=true plus dm_policy/group_policy: open on the platform.
+2026-07-12 02:02:48,232 INFO gateway.run: Connecting to api_server...
+2026-07-12 02:02:49,300 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8645 (model: hermes-agent)
+2026-07-12 02:02:49,343 INFO gateway.run: ✓ api_server connected
+2026-07-12 02:02:49,373 INFO gateway.run: Gateway running with 1 platform(s)
+2026-07-12 02:02:49,387 INFO gateway.run: Channel directory built: 0 target(s)
+2026-07-12 02:02:50,392 INFO gateway.run: Press Ctrl+C to stop
+2026-07-12 02:02:50,418 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-07-12 02:02:50,451 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes-customer\kanban\.dispatcher.lock)
+2026-07-12 02:02:55,439 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-07-12 02:31:20,529 INFO gateway.run: Starting Hermes Gateway...
+2026-07-12 02:31:20,529 INFO gateway.run: Session storage: C:\Users\satya\HermesStore\.hermes-customer\sessions
+2026-07-12 02:31:20,536 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-07-12 02:31:20,536 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-07-12 02:31:20,557 WARNING gateway.run: No env user allowlists configured. Messaging platforms default to pairing/allowlist policies and will deny unknown senders unless you configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id) or explicitly opt in with GATEWAY_ALLOW_ALL_USERS=true plus dm_policy/group_policy: open on the platform.
+2026-07-12 02:31:20,735 INFO gateway.run: Connecting to api_server...
+2026-07-12 02:31:21,784 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8645 (model: hermes-agent)
+2026-07-12 02:31:21,824 INFO gateway.run: ✓ api_server connected
+2026-07-12 02:31:21,844 INFO gateway.run: Gateway running with 1 platform(s)
+2026-07-12 02:31:21,851 INFO gateway.run: Channel directory built: 0 target(s)
+2026-07-12 02:31:22,861 INFO gateway.run: Press Ctrl+C to stop
+2026-07-12 02:31:22,884 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-07-12 02:31:22,911 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes-customer\kanban\.dispatcher.lock)
+2026-07-12 02:31:27,911 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-07-12 02:52:08,783 INFO gateway.run: Starting Hermes Gateway...
+2026-07-12 02:52:08,787 INFO gateway.run: Session storage: C:\Users\satya\HermesStore\.hermes-customer\sessions
+2026-07-12 02:52:08,792 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-07-12 02:52:08,794 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-07-12 02:52:08,820 WARNING gateway.run: No env user allowlists configured. Messaging platforms default to pairing/allowlist policies and will deny unknown senders unless you configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id) or explicitly opt in with GATEWAY_ALLOW_ALL_USERS=true plus dm_policy/group_policy: open on the platform.
+2026-07-12 02:52:08,966 INFO gateway.run: Connecting to api_server...
+2026-07-12 02:52:10,028 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8645 (model: hermes-agent)
+2026-07-12 02:52:10,061 INFO gateway.run: ✓ api_server connected
+2026-07-12 02:52:10,087 INFO gateway.run: Gateway running with 1 platform(s)
+2026-07-12 02:52:10,097 INFO gateway.run: Channel directory built: 0 target(s)
+2026-07-12 02:52:11,116 INFO gateway.run: Press Ctrl+C to stop
+2026-07-12 02:52:11,142 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-07-12 02:52:11,171 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes-customer\kanban\.dispatcher.lock)
+2026-07-12 02:52:16,175 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-07-12 02:52:17,395 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:52:33,338 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:52:39,133 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:52:54,331 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:52:57,301 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:53:12,326 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:53:27,350 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:53:42,327 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:53:57,330 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:54:12,839 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:54:41,131 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:55:21,326 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:56:21,365 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:56:36,243 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:56:51,239 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:57:04,001 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:57:06,248 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:57:21,253 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:57:36,232 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:57:51,243 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:58:06,231 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:58:21,242 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:58:36,238 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:58:41,373 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:58:56,322 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:59:11,348 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:59:26,377 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:59:41,348 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:59:53,977 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:59:56,315 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:00:11,345 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:00:21,319 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:00:25,777 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:02:10,730 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:02:31,263 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:03:08,109 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:04:23,028 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'

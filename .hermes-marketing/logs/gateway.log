@@ -1,0 +1,64 @@
+2026-07-12 02:02:48,034 INFO gateway.run: Starting Hermes Gateway...
+2026-07-12 02:02:48,038 INFO gateway.run: Session storage: C:\Users\satya\HermesStore\.hermes-marketing\sessions
+2026-07-12 02:02:48,043 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-07-12 02:02:48,047 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-07-12 02:02:48,069 WARNING gateway.run: No env user allowlists configured. Messaging platforms default to pairing/allowlist policies and will deny unknown senders unless you configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id) or explicitly opt in with GATEWAY_ALLOW_ALL_USERS=true plus dm_policy/group_policy: open on the platform.
+2026-07-12 02:02:48,236 INFO gateway.run: Connecting to api_server...
+2026-07-12 02:02:49,293 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8644 (model: hermes-agent)
+2026-07-12 02:02:49,337 INFO gateway.run: ✓ api_server connected
+2026-07-12 02:02:49,371 INFO gateway.run: Gateway running with 1 platform(s)
+2026-07-12 02:02:49,388 INFO gateway.run: Channel directory built: 0 target(s)
+2026-07-12 02:02:50,392 INFO gateway.run: Press Ctrl+C to stop
+2026-07-12 02:02:50,417 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-07-12 02:02:50,453 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes-marketing\kanban\.dispatcher.lock)
+2026-07-12 02:02:55,484 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-07-12 02:36:44,856 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:47:40,035 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:47:52,853 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:48:02,465 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:48:17,393 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:48:32,367 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:48:48,323 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:49:03,324 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:49:18,315 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:49:33,311 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:50:04,349 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:51:04,331 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:52:04,331 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:52:17,385 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:52:33,330 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:52:39,118 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:52:54,324 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:52:57,284 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:53:12,326 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:53:27,342 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:53:42,319 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:53:57,323 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:54:12,825 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:54:41,119 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:55:21,318 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:56:21,349 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:56:36,226 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:56:51,230 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:57:03,992 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:57:06,240 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:57:21,245 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:57:36,232 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:57:51,233 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:58:06,231 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:58:21,234 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:58:36,230 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:58:41,360 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:58:56,311 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:59:11,340 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:59:26,364 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:59:41,339 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:59:53,969 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:59:56,308 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:00:11,336 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:00:21,305 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:00:25,766 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:02:10,722 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:02:31,254 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:03:08,101 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:04:23,021 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'

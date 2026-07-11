@@ -1,0 +1,57 @@
+# HermesStore .gitignore
+
+# Node
+node_modules/
+.next/
+*.tsbuildinfo
+
+# Profile runtime files (not config)
+.hermes-*/auth.json
+.hermes-*/auth.lock
+.hermes-*/cache/
+.hermes-*/channel_directory.json
+.hermes-*/cron/
+.hermes-*/gateway.lock
+.hermes-*/gateway.pid
+.hermes-*/gateway_state.json
+.hermes-*/kanban.db*
+.hermes-*/kanban/
+.hermes-*/logs/
+.hermes-*/skills/autonomous-ai-agents/
+.hermes-*/skills/computer-use/
+.hermes-*/skills/creative/
+.hermes-*/skills/email/
+.hermes-*/skills/github/
+.hermes-*/skills/media/
+.hermes-*/skills/note-taking/
+.hermes-*/skills/productivity/
+.hermes-*/skills/research/
+.hermes-*/skills/social-media/
+.hermes-*/skills/software-development/
+.hermes-*/.skills_prompt_snapshot.json
+.hermes-*/activity.log
+
+# Main .hermes runtime
+.hermes/auth.json
+.hermes/auth.lock
+.hermes/cache/
+.hermes/cron/
+.hermes/gateway.lock
+.hermes/gateway.pid
+.hermes/gateway_state.json
+.hermes/kanban.db*
+.hermes/kanban/
+.hermes/logs/
+
+# Build artifacts
+build.log
+next.log
+
+# Env files (contain secrets)
+.env
+.env.local
+.env*.example
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,363 @@
+2026-07-12 02:02:41,875 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-07-12 02:02:41,903 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-07-12 02:02:41,914 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-07-12 02:02:42,606 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-07-12 02:02:42,610 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-07-12 02:02:42,615 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-07-12 02:02:42,619 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-07-12 02:02:42,624 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-07-12 02:02:42,626 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-07-12 02:02:42,631 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-07-12 02:02:42,656 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-07-12 02:02:42,660 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-07-12 02:02:42,672 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-07-12 02:02:42,681 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-07-12 02:02:42,691 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-07-12 02:02:42,709 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-07-12 02:02:42,718 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-07-12 02:02:42,740 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-07-12 02:02:42,756 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-07-12 02:02:42,766 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-07-12 02:02:42,774 INFO hermes_cli.plugins: Plugin discovery complete: 51 found, 44 enabled
+2026-07-12 02:02:48,034 INFO gateway.run: Starting Hermes Gateway...
+2026-07-12 02:02:48,037 INFO gateway.run: Session storage: C:\Users\satya\HermesStore\.hermes-customer\sessions
+2026-07-12 02:02:48,043 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-07-12 02:02:48,046 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-07-12 02:02:48,069 WARNING gateway.run: No env user allowlists configured. Messaging platforms default to pairing/allowlist policies and will deny unknown senders unless you configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id) or explicitly opt in with GATEWAY_ALLOW_ALL_USERS=true plus dm_policy/group_policy: open on the platform.
+2026-07-12 02:02:48,232 INFO gateway.run: Connecting to api_server...
+2026-07-12 02:02:49,300 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8645 (model: hermes-agent)
+2026-07-12 02:02:49,343 INFO gateway.run: ✓ api_server connected
+2026-07-12 02:02:49,373 INFO gateway.run: Gateway running with 1 platform(s)
+2026-07-12 02:02:49,387 INFO gateway.run: Channel directory built: 0 target(s)
+2026-07-12 02:02:49,876 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:02:49 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.19.0"
+2026-07-12 02:02:50,392 INFO gateway.run: Press Ctrl+C to stop
+2026-07-12 02:02:50,411 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-07-12 02:02:50,418 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-07-12 02:02:50,451 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes-customer\kanban\.dispatcher.lock)
+2026-07-12 02:02:55,439 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-07-12 02:03:38,001 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:03:38 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.19.0"
+2026-07-12 02:05:23,227 INFO run_agent: Loaded environment variables from C:\Users\satya\HermesStore\.hermes-customer\.env
+2026-07-12 02:05:27,458 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=asyncio_0:24716 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 02:05:27,654 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-07-12 02:05:27,712 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-07-12 02:05:29,789 INFO agent.auxiliary_client: Vision auto-detect: using main provider xiaomi (mimo-v2.5)
+2026-07-12 02:05:30,426 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-07-12 02:05:30,970 INFO agent.auxiliary_client: Vision auto-detect: using main provider xiaomi (mimo-v2.5)
+2026-07-12 02:05:31,020 WARNING tools.registry: check_fn check_web_api_key returned False; dependent tools will be unavailable this turn
+2026-07-12 02:05:32,626 INFO [api-1acbeb1e8217dd4e] agent.turn_context: conversation turn: session=api-1acbeb1e8217dd4e model=mimo-v2.5-pro provider=xiaomi platform=api_server history=0 msg='What is your role? One sentence.'
+2026-07-12 02:05:36,124 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-13 (_call):34880 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 02:05:39,765 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-13 (_call):34880 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 02:05:39,767 INFO [api-1acbeb1e8217dd4e] agent.conversation_loop: API call #1: model=mimo-v2.5-pro provider=xiaomi in=15412 out=58 total=15470 latency=4.2s
+2026-07-12 02:05:40,689 INFO [api-1acbeb1e8217dd4e] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=mimo-v2.5-pro api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=140 session=api-1acbeb1e8217dd4e
+2026-07-12 02:05:40,703 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:05:23 +0530] "POST /v1/chat/completions HTTP/1.1" 200 954 "-" "curl/8.19.0"
+2026-07-12 02:22:51,559 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:22:51 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:26:08,968 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:26:08 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:30:02,564 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:30:02 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:30:12,568 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:30:12 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:30:22,484 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:30:22 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:30:32,498 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:30:32 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:30:32,872 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:30:32 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:31:06,025 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-07-12 02:31:06,033 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-07-12 02:31:06,042 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-07-12 02:31:06,546 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-07-12 02:31:06,550 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-07-12 02:31:06,554 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-07-12 02:31:06,556 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-07-12 02:31:06,561 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-07-12 02:31:06,561 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-07-12 02:31:06,567 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-07-12 02:31:06,587 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-07-12 02:31:06,587 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-07-12 02:31:06,604 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-07-12 02:31:06,612 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-07-12 02:31:06,619 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-07-12 02:31:06,627 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-07-12 02:31:06,637 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-07-12 02:31:06,641 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-07-12 02:31:06,649 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-07-12 02:31:06,653 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-07-12 02:31:06,663 INFO hermes_cli.plugins: Plugin discovery complete: 51 found, 44 enabled
+2026-07-12 02:31:16,423 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-07-12 02:31:16,430 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-07-12 02:31:16,434 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-07-12 02:31:16,925 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-07-12 02:31:16,933 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-07-12 02:31:16,934 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-07-12 02:31:16,934 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-07-12 02:31:16,934 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-07-12 02:31:16,934 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-07-12 02:31:16,934 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-07-12 02:31:16,950 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-07-12 02:31:16,950 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-07-12 02:31:16,965 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-07-12 02:31:16,967 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-07-12 02:31:16,967 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-07-12 02:31:16,984 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-07-12 02:31:16,984 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-07-12 02:31:16,994 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-07-12 02:31:16,994 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-07-12 02:31:17,001 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-07-12 02:31:17,008 INFO hermes_cli.plugins: Plugin discovery complete: 51 found, 44 enabled
+2026-07-12 02:31:20,529 INFO gateway.run: Starting Hermes Gateway...
+2026-07-12 02:31:20,529 INFO gateway.run: Session storage: C:\Users\satya\HermesStore\.hermes-customer\sessions
+2026-07-12 02:31:20,536 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-07-12 02:31:20,536 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-07-12 02:31:20,557 WARNING gateway.run: No env user allowlists configured. Messaging platforms default to pairing/allowlist policies and will deny unknown senders unless you configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id) or explicitly opt in with GATEWAY_ALLOW_ALL_USERS=true plus dm_policy/group_policy: open on the platform.
+2026-07-12 02:31:20,735 INFO gateway.run: Connecting to api_server...
+2026-07-12 02:31:21,784 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8645 (model: hermes-agent)
+2026-07-12 02:31:21,824 INFO gateway.run: ✓ api_server connected
+2026-07-12 02:31:21,844 INFO gateway.run: Gateway running with 1 platform(s)
+2026-07-12 02:31:21,851 INFO gateway.run: Channel directory built: 0 target(s)
+2026-07-12 02:31:22,327 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:31:22 +0530] "GET /health HTTP/1.1" 200 526 "-" "node"
+2026-07-12 02:31:22,411 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:31:22 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:31:22,518 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:31:22 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:31:22,861 INFO gateway.run: Press Ctrl+C to stop
+2026-07-12 02:31:22,878 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-07-12 02:31:22,884 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-07-12 02:31:22,911 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes-customer\kanban\.dispatcher.lock)
+2026-07-12 02:31:27,911 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-07-12 02:31:32,421 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:31:32 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:31:42,409 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:31:42 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:31:53,388 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:31:53 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:32:02,414 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:32:02 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:32:13,385 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:32:13 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:32:23,421 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:32:23 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:32:33,417 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:32:33 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:33:04,383 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:33:04 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:33:40,103 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:33:40 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:33:42,428 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:33:42 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:33:52,418 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:33:52 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:34:02,395 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:34:02 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:34:12,393 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:34:12 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:34:22,386 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:34:22 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:34:32,407 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:34:32 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:34:42,419 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:34:42 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:34:52,416 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:34:52 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:52:04,381 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-07-12 02:52:04,423 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-07-12 02:52:04,440 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-07-12 02:52:04,932 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-07-12 02:52:04,936 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-07-12 02:52:04,940 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-07-12 02:52:04,944 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-07-12 02:52:04,947 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-07-12 02:52:04,948 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-07-12 02:52:04,954 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-07-12 02:52:04,972 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-07-12 02:52:04,976 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-07-12 02:52:04,988 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-07-12 02:52:04,995 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-07-12 02:52:05,001 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-07-12 02:52:05,028 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-07-12 02:52:05,038 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-07-12 02:52:05,046 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-07-12 02:52:05,054 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-07-12 02:52:05,062 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-07-12 02:52:05,068 INFO hermes_cli.plugins: Plugin discovery complete: 51 found, 44 enabled
+2026-07-12 02:52:08,783 INFO gateway.run: Starting Hermes Gateway...
+2026-07-12 02:52:08,787 INFO gateway.run: Session storage: C:\Users\satya\HermesStore\.hermes-customer\sessions
+2026-07-12 02:52:08,792 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-07-12 02:52:08,794 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-07-12 02:52:08,820 WARNING gateway.run: No env user allowlists configured. Messaging platforms default to pairing/allowlist policies and will deny unknown senders unless you configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id) or explicitly opt in with GATEWAY_ALLOW_ALL_USERS=true plus dm_policy/group_policy: open on the platform.
+2026-07-12 02:52:08,966 INFO gateway.run: Connecting to api_server...
+2026-07-12 02:52:10,028 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8645 (model: hermes-agent)
+2026-07-12 02:52:10,061 INFO gateway.run: ✓ api_server connected
+2026-07-12 02:52:10,087 INFO gateway.run: Gateway running with 1 platform(s)
+2026-07-12 02:52:10,097 INFO gateway.run: Channel directory built: 0 target(s)
+2026-07-12 02:52:11,116 INFO gateway.run: Press Ctrl+C to stop
+2026-07-12 02:52:11,134 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-07-12 02:52:11,142 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-07-12 02:52:11,171 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes-customer\kanban\.dispatcher.lock)
+2026-07-12 02:52:16,175 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-07-12 02:52:17,395 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:52:17,400 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:52:17 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:52:21,915 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:52:21 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.19.0"
+2026-07-12 02:52:33,269 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:52:33 +0530] "POST /api/jobs HTTP/1.1" 200 1441 "-" "curl/8.19.0"
+2026-07-12 02:52:33,338 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:52:33,343 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:52:33 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:52:33,608 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:52:33 +0530] "POST /api/jobs HTTP/1.1" 200 1406 "-" "curl/8.19.0"
+2026-07-12 02:52:33,928 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:52:33 +0530] "POST /api/jobs HTTP/1.1" 200 1398 "-" "curl/8.19.0"
+2026-07-12 02:52:39,133 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:52:39,143 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:52:39 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:52:52,311 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:52:52 +0530] "GET /api/jobs HTTP/1.1" 200 3311 "-" "curl/8.19.0"
+2026-07-12 02:52:54,331 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:52:54,336 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:52:54 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:52:57,301 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:52:57,313 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:52:57 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:53:06,271 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:53:06 +0530] "GET /api/jobs HTTP/1.1" 200 3311 "-" "curl/8.19.0"
+2026-07-12 02:53:12,326 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:53:12,337 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:53:12 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:53:27,350 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:53:27,356 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:53:27 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:53:27,798 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:53:27 +0530] "POST /api/jobs/d90af795de58/pause HTTP/1.1" 200 1470 "-" "curl/8.19.0"
+2026-07-12 02:53:27,986 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:53:27 +0530] "POST /api/jobs/01a34d5cd19d/pause HTTP/1.1" 200 1434 "-" "curl/8.19.0"
+2026-07-12 02:53:28,146 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:53:28 +0530] "POST /api/jobs/2eac2560d265/pause HTTP/1.1" 200 1426 "-" "curl/8.19.0"
+2026-07-12 02:53:42,327 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:53:42,332 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:53:42 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:53:57,330 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:53:57,334 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:53:57 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:54:12,839 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:54:12,847 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:54:12 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:54:41,131 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:54:41,139 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:54:41 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:54:51,103 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:54:51 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.19.0"
+2026-07-12 02:55:11,054 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:55:10 +0530] "POST /api/jobs HTTP/1.1" 200 1441 "-" "curl/8.19.0"
+2026-07-12 02:55:11,370 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:55:11 +0530] "POST /api/jobs HTTP/1.1" 200 1406 "-" "curl/8.19.0"
+2026-07-12 02:55:11,635 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:55:11 +0530] "POST /api/jobs HTTP/1.1" 200 1398 "-" "curl/8.19.0"
+2026-07-12 02:55:12,141 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:55:12 +0530] "GET /api/jobs HTTP/1.1" 200 3311 "-" "curl/8.19.0"
+2026-07-12 02:55:21,178 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:55:21 +0530] "GET /api/jobs HTTP/1.1" 200 3311 "-" "curl/8.19.0"
+2026-07-12 02:55:21,326 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:55:21,332 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:55:21 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:56:21,365 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:56:21,376 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:56:21 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:56:36,243 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:56:36,248 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:56:36 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:56:51,239 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:56:51,241 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:56:51 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:57:04,001 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:57:04,006 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:57:03 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:57:06,248 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:57:06,253 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:57:06 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:57:21,253 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:57:21,258 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:57:21 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:57:36,232 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:57:36,245 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:57:36 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:57:51,243 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:57:51,248 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:57:51 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:58:06,231 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:58:06,248 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:58:06 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:58:21,242 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:58:21,249 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:58:21 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:58:36,238 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:58:36,246 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:58:36 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:58:41,373 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:58:41,380 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:58:41 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:58:56,322 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:58:56,326 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:58:56 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:59:11,348 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:59:11,354 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:59:11 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:59:26,377 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:59:26,385 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:59:26 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:59:41,348 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:59:41,354 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:59:41 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:59:53,977 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:59:53,982 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:59:53 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:59:56,315 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:59:56,319 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:59:56 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 03:00:11,345 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:00:11,351 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:03:00:11 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 03:00:21,319 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:00:21,326 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:03:00:21 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 03:00:25,306 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:03:00:25 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 03:00:25,777 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:00:25,784 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:03:00:25 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 03:02:10,730 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:02:10,735 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:03:02:10 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 03:02:31,263 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:02:31,269 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:03:02:31 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 03:03:08,109 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:03:08,113 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:03:03:08 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 03:04:23,028 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:04:23,033 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:03:04:23 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 03:10:11,914 INFO run_agent: Loaded environment variables from C:\Users\satya\HermesStore\.hermes-customer\.env
+2026-07-12 03:10:13,707 INFO cron.scheduler: Running job 'support-watcher' (ID: 5424ba0744c1)
+2026-07-12 03:10:13,709 INFO cron.scheduler: Prompt: [IMPORTANT: You are running as a scheduled cron job. DELIVERY: Your final response will be automatic
+2026-07-12 03:10:13,790 INFO cron.scheduler: Job '5424ba0744c1': loaded credential pool for provider xiaomi with 1 entries
+2026-07-12 03:10:17,820 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=cron-parallel_0:30500 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:10:18,051 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-07-12 03:10:18,121 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-07-12 03:10:20,517 INFO agent.auxiliary_client: Vision auto-detect: using main provider xiaomi (mimo-v2.5)
+2026-07-12 03:10:20,546 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-07-12 03:10:21,237 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-07-12 03:10:21,247 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-07-12 03:10:21,259 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-07-12 03:10:21,957 INFO agent.auxiliary_client: Vision auto-detect: using main provider xiaomi (mimo-v2.5)
+2026-07-12 03:10:23,571 INFO [cron_5424ba0744c1_20260712_031013] agent.turn_context: conversation turn: session=cron_5424ba0744c1_20260712_031013 model=mimo-v2.5-pro provider=xiaomi platform=cron history=0 msg='[IMPORTANT: You are running as a scheduled cron job. DELIVERY: Your final respon...'
+2026-07-12 03:10:26,973 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-13 (_call):34848 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:10:32,616 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-13 (_call):34848 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:10:32,618 INFO [cron_5424ba0744c1_20260712_031013] agent.conversation_loop: API call #1: model=mimo-v2.5-pro provider=xiaomi in=16593 out=179 total=16772 latency=6.2s cache=2048/16593 (12%)
+2026-07-12 03:10:33,390 INFO tools.file_tools: Creating new local environment for task default...
+2026-07-12 03:10:34,597 INFO tools.environments.base: Session snapshot created (session=337662b2ea84, cwd=C:\Users\satya\HermesStore)
+2026-07-12 03:10:34,600 INFO tools.file_tools: local environment ready for task default
+2026-07-12 03:10:38,173 INFO agent.tool_executor: tool search_files completed (4.80s, 4923 chars)
+2026-07-12 03:10:39,764 INFO agent.tool_executor: tool search_files completed (6.39s, 5422 chars)
+2026-07-12 03:10:40,318 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-22 (_call):20856 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:10:44,836 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-22 (_call):20856 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:10:44,838 INFO [cron_5424ba0744c1_20260712_031013] agent.conversation_loop: API call #2: model=mimo-v2.5-pro provider=xiaomi in=19952 out=207 total=20159 latency=5.1s cache=16576/19952 (83%)
+2026-07-12 03:10:46,265 INFO agent.tool_executor: tool search_files completed (1.42s, 1128 chars)
+2026-07-12 03:10:46,288 INFO agent.tool_executor: tool search_files completed (1.44s, 220 chars)
+2026-07-12 03:10:46,863 INFO agent.tool_executor: tool search_files completed (2.02s, 18 chars)
+2026-07-12 03:10:47,119 INFO agent.tool_executor: tool search_files completed (2.27s, 18 chars)
+2026-07-12 03:10:47,696 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-33 (_call):36416 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:10:53,572 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-33 (_call):36416 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:10:53,573 INFO [cron_5424ba0744c1_20260712_031013] agent.conversation_loop: API call #3: model=mimo-v2.5-pro provider=xiaomi in=20616 out=191 total=20807 latency=6.4s cache=19904/20616 (97%)
+2026-07-12 03:10:54,874 INFO agent.tool_executor: tool search_files completed (1.29s, 88 chars)
+2026-07-12 03:10:55,500 INFO agent.tool_executor: tool search_files completed (1.91s, 18 chars)
+2026-07-12 03:10:55,501 INFO agent.tool_executor: tool search_files completed (1.91s, 18 chars)
+2026-07-12 03:10:56,156 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-42 (_call):43896 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:11:00,433 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-42 (_call):43896 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:11:00,435 INFO [cron_5424ba0744c1_20260712_031013] agent.conversation_loop: API call #4: model=mimo-v2.5-pro provider=xiaomi in=20869 out=153 total=21022 latency=4.9s cache=20608/20869 (99%)
+2026-07-12 03:11:02,673 INFO agent.tool_executor: tool search_files completed (2.22s, 18 chars)
+2026-07-12 03:11:02,707 INFO agent.tool_executor: tool search_files completed (2.25s, 18 chars)
+2026-07-12 03:11:02,955 INFO agent.tool_executor: tool read_file completed (2.50s, 1948 chars)
+2026-07-12 03:11:03,731 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-53 (_call):16880 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:11:08,743 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-53 (_call):16880 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:11:08,745 INFO [cron_5424ba0744c1_20260712_031013] agent.conversation_loop: API call #5: model=mimo-v2.5-pro provider=xiaomi in=21649 out=150 total=21799 latency=5.8s cache=20864/21649 (96%)
+2026-07-12 03:11:10,595 INFO agent.tool_executor: tool read_file completed (1.84s, 8473 chars)
+2026-07-12 03:11:10,779 INFO agent.tool_executor: tool search_files completed (2.03s, 18 chars)
+2026-07-12 03:11:11,183 INFO agent.tool_executor: tool search_files completed (2.43s, 18 chars)
+2026-07-12 03:11:11,832 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-64 (_call):29856 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:11:16,925 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-64 (_call):29856 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:11:16,927 INFO [cron_5424ba0744c1_20260712_031013] agent.conversation_loop: API call #6: model=mimo-v2.5-pro provider=xiaomi in=24769 out=153 total=24922 latency=5.7s cache=21632/24769 (87%)
+2026-07-12 03:11:22,085 INFO agent.tool_executor: tool search_files completed (5.15s, 4663 chars)
+2026-07-12 03:11:38,320 INFO agent.tool_executor: tool search_files completed (21.38s, 218 chars)
+2026-07-12 03:11:38,899 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-69 (_call):21476 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:11:44,437 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-69 (_call):21476 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:11:44,438 INFO [cron_5424ba0744c1_20260712_031013] agent.conversation_loop: API call #7: model=mimo-v2.5-pro provider=xiaomi in=26822 out=229 total=27051 latency=6.1s cache=24704/26822 (92%)
+2026-07-12 03:11:46,447 INFO agent.tool_executor: tool search_files completed (2.00s, 18 chars)
+2026-07-12 03:11:46,469 INFO agent.tool_executor: tool search_files completed (2.02s, 18 chars)
+2026-07-12 03:11:46,471 INFO agent.tool_executor: tool search_files completed (2.02s, 18 chars)
+2026-07-12 03:11:47,040 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-79 (_call):33212 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:11:51,335 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-79 (_call):33212 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:11:51,337 INFO [cron_5424ba0744c1_20260712_031013] agent.conversation_loop: API call #8: model=mimo-v2.5-pro provider=xiaomi in=27091 out=177 total=27268 latency=4.9s cache=26816/27091 (99%)
+2026-07-12 03:11:52,771 INFO agent.tool_executor: tool search_files completed (1.43s, 150 chars)
+2026-07-12 03:11:53,381 INFO agent.tool_executor: tool search_files completed (2.04s, 18 chars)
+2026-07-12 03:11:53,404 INFO agent.tool_executor: tool search_files completed (2.06s, 18 chars)
+2026-07-12 03:11:54,025 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-88 (_call):32804 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:11:57,742 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-88 (_call):32804 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:11:57,744 INFO [cron_5424ba0744c1_20260712_031013] agent.conversation_loop: API call #9: model=mimo-v2.5-pro provider=xiaomi in=27346 out=123 total=27469 latency=4.3s cache=27072/27346 (99%)
+2026-07-12 03:11:59,147 INFO agent.tool_executor: tool search_files completed (1.39s, 3964 chars)
+2026-07-12 03:12:00,151 INFO agent.tool_executor: tool search_files completed (2.40s, 18 chars)
+2026-07-12 03:12:00,817 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-94 (_call):29916 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:12:04,938 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-94 (_call):29916 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:12:04,939 INFO [cron_5424ba0744c1_20260712_031013] agent.conversation_loop: API call #10: model=mimo-v2.5-pro provider=xiaomi in=28757 out=171 total=28928 latency=4.8s cache=27328/28757 (95%)
+2026-07-12 03:12:06,969 INFO agent.tool_executor: tool read_file completed (2.02s, 533 chars)
+2026-07-12 03:12:07,187 INFO agent.tool_executor: tool read_file completed (2.24s, 12518 chars)
+2026-07-12 03:12:07,191 INFO agent.tool_executor: tool read_file completed (2.24s, 1948 chars)
+2026-07-12 03:12:07,869 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-107 (_call):42008 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:12:12,472 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-107 (_call):42008 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:12:12,474 INFO [cron_5424ba0744c1_20260712_031013] agent.conversation_loop: API call #11: model=mimo-v2.5-pro provider=xiaomi in=33859 out=175 total=34034 latency=5.3s cache=28736/33859 (85%)
+2026-07-12 03:12:13,682 INFO agent.tool_executor: tool search_files completed (1.20s, 3854 chars)
+2026-07-12 03:12:14,291 INFO agent.tool_executor: tool read_file completed (1.81s, 9677 chars)
+2026-07-12 03:12:15,057 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-114 (_call):21348 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:12:21,649 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-114 (_call):21348 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:12:21,651 INFO [cron_5424ba0744c1_20260712_031013] agent.conversation_loop: API call #12: model=mimo-v2.5-pro provider=xiaomi in=39436 out=240 total=39676 latency=7.3s cache=33856/39436 (86%)
+2026-07-12 03:12:21,664 INFO agent.tool_executor: tool session_search completed (0.00s, 155 chars)
+2026-07-12 03:12:23,683 INFO agent.tool_executor: tool search_files completed (2.02s, 18 chars)
+2026-07-12 03:12:24,305 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-118 (_call):41496 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:12:29,001 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-118 (_call):41496 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:12:29,003 INFO [cron_5424ba0744c1_20260712_031013] agent.conversation_loop: API call #13: model=mimo-v2.5-pro provider=xiaomi in=39739 out=169 total=39908 latency=5.3s cache=39424/39739 (99%)
+2026-07-12 03:12:29,031 INFO [cron_5424ba0744c1_20260712_031013] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=mimo-v2.5-pro api_calls=13/90 budget=13/90 tool_turns=12 last_msg_role=assistant response_len=8 session=cron_5424ba0744c1_20260712_031013
+2026-07-12 03:12:29,043 INFO cron.scheduler: Job 'support-watcher' completed successfully
+2026-07-12 03:12:29,057 INFO run_agent: OpenAI client closed (agent_close, shared=True, tcp_force_closed=0) thread=cron-parallel_0:30500 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:12:29,085 INFO cron.scheduler: Job '5424ba0744c1': agent returned [SILENT] — skipping delivery
+2026-07-12 03:12:32,201 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=bg-review:36588 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:12:33,135 INFO [cron_5424ba0744c1_20260712_031013] agent.turn_context: conversation turn: session=cron_5424ba0744c1_20260712_031013 model=mimo-v2.5-pro provider=xiaomi platform=cron history=46 msg='Review the conversation above and update the skill library. Be ACTIVE — most ses...'
+2026-07-12 03:12:33,790 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-120 (_call):39656 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:12:50,150 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-120 (_call):39656 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:12:50,152 INFO [cron_5424ba0744c1_20260712_031013] agent.conversation_loop: API call #1: model=mimo-v2.5-pro provider=xiaomi in=41213 out=687 total=41900 latency=17.0s cache=39680/41213 (96%)
+2026-07-12 03:12:50,163 INFO [cron_5424ba0744c1_20260712_031013] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=mimo-v2.5-pro api_calls=1/16 budget=1/16 tool_turns=12 last_msg_role=assistant response_len=500 session=cron_5424ba0744c1_20260712_031013
+2026-07-12 03:12:50,174 INFO [cron_5424ba0744c1_20260712_031013] run_agent: OpenAI client closed (agent_close, shared=True, tcp_force_closed=0) thread=bg-review:36588 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 03:17:34,871 INFO tools.terminal_tool: Cleaned up inactive environment for task: default
+2026-07-12 03:22:27,514 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:03:22:27 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.19.0"

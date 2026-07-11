@@ -1,0 +1,223 @@
+2026-07-12 02:02:41,858 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-07-12 02:02:41,895 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-07-12 02:02:41,904 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-07-12 02:02:42,593 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-07-12 02:02:42,599 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-07-12 02:02:42,604 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-07-12 02:02:42,608 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-07-12 02:02:42,612 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-07-12 02:02:42,615 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-07-12 02:02:42,625 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-07-12 02:02:42,652 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-07-12 02:02:42,657 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-07-12 02:02:42,671 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-07-12 02:02:42,679 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-07-12 02:02:42,690 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-07-12 02:02:42,710 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-07-12 02:02:42,721 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-07-12 02:02:42,731 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-07-12 02:02:42,741 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-07-12 02:02:42,751 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-07-12 02:02:42,759 INFO hermes_cli.plugins: Plugin discovery complete: 51 found, 44 enabled
+2026-07-12 02:02:48,034 INFO gateway.run: Starting Hermes Gateway...
+2026-07-12 02:02:48,038 INFO gateway.run: Session storage: C:\Users\satya\HermesStore\.hermes-marketing\sessions
+2026-07-12 02:02:48,043 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-07-12 02:02:48,047 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-07-12 02:02:48,069 WARNING gateway.run: No env user allowlists configured. Messaging platforms default to pairing/allowlist policies and will deny unknown senders unless you configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id) or explicitly opt in with GATEWAY_ALLOW_ALL_USERS=true plus dm_policy/group_policy: open on the platform.
+2026-07-12 02:02:48,236 INFO gateway.run: Connecting to api_server...
+2026-07-12 02:02:49,293 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8644 (model: hermes-agent)
+2026-07-12 02:02:49,337 INFO gateway.run: ✓ api_server connected
+2026-07-12 02:02:49,371 INFO gateway.run: Gateway running with 1 platform(s)
+2026-07-12 02:02:49,388 INFO gateway.run: Channel directory built: 0 target(s)
+2026-07-12 02:02:49,790 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:02:49 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.19.0"
+2026-07-12 02:02:50,392 INFO gateway.run: Press Ctrl+C to stop
+2026-07-12 02:02:50,411 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-07-12 02:02:50,417 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-07-12 02:02:50,453 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes-marketing\kanban\.dispatcher.lock)
+2026-07-12 02:02:55,484 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-07-12 02:03:37,919 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:03:37 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.19.0"
+2026-07-12 02:05:05,332 INFO run_agent: Loaded environment variables from C:\Users\satya\HermesStore\.hermes-marketing\.env
+2026-07-12 02:05:09,685 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=asyncio_1:29244 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 02:05:09,887 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-07-12 02:05:09,954 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-07-12 02:05:11,889 INFO agent.auxiliary_client: Vision auto-detect: using main provider xiaomi (mimo-v2.5)
+2026-07-12 02:05:12,473 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-07-12 02:05:13,070 INFO agent.auxiliary_client: Vision auto-detect: using main provider xiaomi (mimo-v2.5)
+2026-07-12 02:05:13,118 WARNING tools.registry: check_fn check_web_api_key returned False; dependent tools will be unavailable this turn
+2026-07-12 02:05:14,989 INFO [api-1acbeb1e8217dd4e] agent.turn_context: conversation turn: session=api-1acbeb1e8217dd4e model=mimo-v2.5-pro provider=xiaomi platform=api_server history=0 msg='What is your role? One sentence.'
+2026-07-12 02:05:18,212 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-13 (_call):27852 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 02:05:21,725 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-13 (_call):27852 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 02:05:21,727 INFO [api-1acbeb1e8217dd4e] agent.conversation_loop: API call #1: model=mimo-v2.5-pro provider=xiaomi in=15434 out=57 total=15491 latency=4.1s
+2026-07-12 02:05:22,768 INFO [api-1acbeb1e8217dd4e] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=mimo-v2.5-pro api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=137 session=api-1acbeb1e8217dd4e
+2026-07-12 02:05:22,780 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:05:05 +0530] "POST /v1/chat/completions HTTP/1.1" 200 956 "-" "curl/8.19.0"
+2026-07-12 02:22:51,416 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:22:51 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:26:08,937 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:26:08 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:30:02,554 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:30:02 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:30:12,569 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:30:12 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:30:22,484 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:30:22 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:30:32,484 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:30:32 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:30:32,859 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:30:32 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:30:40,436 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:30:40 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:30:42,606 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:30:42 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:30:52,490 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:30:52 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:30:58,855 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:30:58 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:31:02,402 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:31:02 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:31:12,433 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:31:12 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:31:22,409 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:31:22 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:31:22,518 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:31:22 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:31:32,414 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:31:32 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:31:42,409 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:31:42 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:31:53,384 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:31:53 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:32:02,408 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:32:02 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:32:13,381 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:32:13 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:32:23,404 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:32:23 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:32:33,412 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:32:33 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:33:04,377 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:33:04 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:33:40,094 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:33:40 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:33:42,429 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:33:42 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:33:52,413 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:33:52 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:34:02,392 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:34:02 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:34:12,381 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:34:12 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:34:22,386 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:34:22 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:34:32,400 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:34:32 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:34:42,418 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:34:42 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:34:52,409 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:34:52 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:36:44,856 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:36:44,884 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:36:44 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:36:53,117 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:36:53 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:37:02,905 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:37:02 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:37:13,445 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:37:13 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:37:23,585 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:37:23 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:37:33,402 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:37:33 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:37:43,386 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:37:43 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:37:53,382 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:37:53 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:38:03,377 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:38:03 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:38:12,436 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:38:12 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:38:23,415 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:38:23 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:39:04,412 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:39:04 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:40:04,383 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:40:04 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:41:04,392 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:41:04 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:42:04,435 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:42:04 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:43:04,380 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:43:04 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:44:04,400 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:44:04 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:45:04,397 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:45:04 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:46:04,386 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:46:04 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:47:04,384 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:47:04 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:47:37,048 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:47:37 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:47:39,218 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:47:39 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:47:40,035 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:47:40,046 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:47:40 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:47:50,775 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:47:50 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 02:47:52,853 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:47:52,870 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:47:52 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:48:02,465 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:48:02,489 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:48:02 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:48:17,393 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:48:17,403 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:48:17 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:48:32,367 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:48:32,377 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:48:32 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:48:48,323 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:48:48,329 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:48:48 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:49:03,324 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:49:03,329 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:49:03 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:49:18,315 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:49:18,320 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:49:18 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:49:33,311 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:49:33,316 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:49:33 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:50:04,192 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:50:04 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.19.0"
+2026-07-12 02:50:04,349 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:50:04,356 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:50:04 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:51:04,331 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:51:04,336 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:51:04 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:51:32,034 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:51:31 +0530] "POST /api/jobs HTTP/1.1" 200 1450 "-" "curl/8.19.0"
+2026-07-12 02:51:32,430 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:51:32 +0530] "POST /api/jobs HTTP/1.1" 200 1452 "-" "curl/8.19.0"
+2026-07-12 02:51:32,814 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:51:32 +0530] "POST /api/jobs HTTP/1.1" 200 1415 "-" "curl/8.19.0"
+2026-07-12 02:52:04,331 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:52:04,339 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:52:04 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:52:17,385 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:52:17,390 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:52:17 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:52:33,330 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:52:33,335 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:52:33 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:52:39,118 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:52:39,129 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:52:39 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:52:51,918 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:52:51 +0530] "GET /api/jobs HTTP/1.1" 200 3383 "-" "curl/8.19.0"
+2026-07-12 02:52:54,324 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:52:54,328 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:52:54 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:52:57,284 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:52:57,292 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:52:57 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:53:05,936 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:53:05 +0530] "GET /api/jobs HTTP/1.1" 200 3383 "-" "curl/8.19.0"
+2026-07-12 02:53:12,326 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:53:12,326 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:53:12 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:53:27,327 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:53:27 +0530] "POST /api/jobs/00a88ad45a8f/pause HTTP/1.1" 200 1479 "-" "curl/8.19.0"
+2026-07-12 02:53:27,342 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:53:27,347 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:53:27 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:53:27,470 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:53:27 +0530] "POST /api/jobs/c3ec3e80b924/pause HTTP/1.1" 200 1481 "-" "curl/8.19.0"
+2026-07-12 02:53:27,642 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:53:27 +0530] "POST /api/jobs/49bde352c6b9/pause HTTP/1.1" 200 1443 "-" "curl/8.19.0"
+2026-07-12 02:53:42,319 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:53:42,324 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:53:42 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:53:57,323 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:53:57,328 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:53:57 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:54:12,825 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:54:12,834 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:54:12 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:54:41,119 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:54:41,127 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:54:41 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:54:50,934 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:54:50 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.19.0"
+2026-07-12 02:55:10,121 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:55:10 +0530] "POST /api/jobs HTTP/1.1" 200 1450 "-" "curl/8.19.0"
+2026-07-12 02:55:10,447 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:55:10 +0530] "POST /api/jobs HTTP/1.1" 200 1452 "-" "curl/8.19.0"
+2026-07-12 02:55:10,739 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:55:10 +0530] "POST /api/jobs HTTP/1.1" 200 1415 "-" "curl/8.19.0"
+2026-07-12 02:55:12,004 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:55:11 +0530] "GET /api/jobs HTTP/1.1" 200 3383 "-" "curl/8.19.0"
+2026-07-12 02:55:21,023 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:55:21 +0530] "GET /api/jobs HTTP/1.1" 200 3383 "-" "curl/8.19.0"
+2026-07-12 02:55:21,318 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:55:21,323 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:55:21 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:56:21,349 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:56:21,362 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:56:21 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:56:36,226 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:56:36,243 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:56:36 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:56:51,230 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:56:51,237 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:56:51 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:57:03,992 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:57:03,998 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:57:03 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:57:06,240 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:57:06,246 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:57:06 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:57:21,245 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:57:21,250 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:57:21 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:57:36,232 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:57:36,232 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:57:36 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:57:51,233 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:57:51,233 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:57:51 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:58:06,231 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:58:06,231 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:58:06 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:58:21,234 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:58:21,234 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:58:21 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:58:36,230 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:58:36,235 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:58:36 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:58:41,360 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:58:41,369 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:58:41 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:58:56,311 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:58:56,318 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:58:56 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:59:11,340 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:59:11,345 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:59:11 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:59:26,364 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:59:26,372 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:59:26 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:59:41,339 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:59:41,344 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:59:41 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:59:53,969 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:59:53,975 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:59:53 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 02:59:56,308 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 02:59:56,312 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:02:59:56 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 03:00:11,336 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:00:11,342 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:03:00:11 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 03:00:21,305 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:00:21,316 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:03:00:21 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 03:00:25,297 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:03:00:25 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.18.0"
+2026-07-12 03:00:25,766 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:00:25,773 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:03:00:25 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 03:02:10,722 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:02:10,727 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:03:02:10 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 03:02:31,254 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:02:31,259 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:03:02:31 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 03:03:08,101 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:03:08,106 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:03:03:08 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 03:04:23,021 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/api/jobs' user_agent='node'
+2026-07-12 03:04:23,025 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:03:04:23 +0530] "GET /api/jobs HTTP/1.1" 401 573 "-" "node"
+2026-07-12 03:22:27,422 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:03:22:27 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.19.0"

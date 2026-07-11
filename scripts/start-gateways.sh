@@ -1,58 +1,103 @@
 #!/bin/bash
-# Start all 4 Hermes gateways for HermesStore
+# HermesStore — Start All Gateways + Create Cron Jobs
+# Run this every time to start the app. Jobs are recreated if missing.
+# Usage: bash scripts/start-gateways.sh
 
-echo "🚀 Starting HermesStore gateways..."
-echo ""
+set -e
 
-for port in 8642 8643 8644 8645; do
-    pid=$(lsof -ti:$port 2>/dev/null)
-    if [ -n "$pid" ]; then
-        echo "⚠️  Killing existing process on port $port (PID: $pid)"
-        kill $pid 2>/dev/null
-    fi
+HERMES_BIN="C:/Users/satya/HermesStore/hermes-agent/.venv/Scripts/hermes.exe"
+PROJECT="C:/Users/satya/HermesStore"
+
+declare -A PROFILES=(
+  ["brain"]="8642:hermesstore-brain-2026-secret-key-32c"
+  ["storeops"]="8643:hermesstore-storeops-2026-secret-32c"
+  ["marketing"]="8644:hermesstore-marketing-2026-secret-32c"
+  ["customer"]="8645:hermesstore-customer-2026-secret-32c"
+)
+
+echo "Starting HermesStore Gateways..."
+
+# Start each gateway
+for dept in brain storeops marketing customer; do
+  IFS=':' read -r port key <<< "${PROFILES[$dept]}"
+  home="$PROJECT/.hermes-$dept"
+
+  # Kill existing process on port
+  lsof -ti:$port 2>/dev/null | xargs kill 2>/dev/null || true
+
+  # Start gateway in background
+  cd "$PROJECT"
+  HERMES_HOME="$home" "$HERMES_BIN" gateway &>/dev/null &
+  echo "  Started $dept on port $port (PID $!)"
 done
 
-sleep 1
-
-echo "Starting brain (port 8642)..."
-hermes -p hermesstore-brain gateway &
-BRAIN_PID=$!
-
-echo "Starting storeops (port 8643)..."
-hermes -p hermesstore-storeops gateway &
-STOREOPS_PID=$!
-
-echo "Starting marketing (port 8644)..."
-hermes -p hermesstore-marketing gateway &
-MARKETING_PID=$!
-
-echo "Starting customer-brand (port 8645)..."
-hermes -p hermesstore-customer-brand gateway &
-CUSTOMER_PID=$!
-
-sleep 5
-
 echo ""
-echo "✅ All gateways started!"
+echo "Waiting for gateways to initialize..."
+sleep 20
+
+# Health check
 echo ""
-echo "Ports:"
-echo "  Brain:          http://localhost:8642"
-echo "  StoreOps:       http://localhost:8643"
-echo "  Marketing:      http://localhost:8644"
-echo "  Customer-Brand: http://localhost:8645"
-echo ""
-echo "PIDs: $BRAIN_PID, $STOREOPS_PID, $MARKETING_PID, $CUSTOMER_PID"
-echo ""
-echo "To stop all: kill $BRAIN_PID $STOREOPS_PID $MARKETING_PID $CUSTOMER_PID"
-echo ""
-echo "Health checks:"
-for port in 8642 8643 8644 8645; do
-    status=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:$port/health 2>/dev/null || echo "000")
-    if [ "$status" = "200" ]; then
-        echo "  ✅ Port $port: healthy"
-    else
-        echo "  ❌ Port $port: not responding (may still be starting)"
-    fi
+for dept in brain storeops marketing customer; do
+  IFS=':' read -r port key <<< "${PROFILES[$dept]}"
+  if curl -s --max-time 5 "http://127.0.0.1:$port/health" | grep -q "ok"; then
+    echo "  $dept (port $port): OK"
+  else
+    echo "  $dept (port $port): FAILED"
+  fi
 done
 
-wait
+# Create cron jobs
+echo ""
+echo "Creating cron jobs..."
+
+create_job() {
+  local port=$1 key=$2 name=$3 schedule=$4 prompt=$5
+  curl -s --max-time 10 -X POST "http://127.0.0.1:$port/api/jobs" \
+    -H "Authorization: Bearer $key" \
+    -H "Content-Type: application/json" \
+    -d "{\"name\":\"$name\",\"schedule\":\"$schedule\",\"prompt\":\"$prompt\"}" > /dev/null 2>&1
+  echo "  Created: $name"
+}
+
+# Store Ops jobs
+create_job 8643 "${PROFILES[storeops]##*:}" "store-health-monitor" "every 30m" "Check store health: scan all products for missing descriptions, missing images, pricing inconsistencies, SEO issues."
+create_job 8643 "${PROFILES[storeops]##*:}" "competitor-price-monitor" "every 2h" "Search for competitor pricing on top products. Alert if competitor dropped price more than 5%."
+create_job 8643 "${PROFILES[storeops]##*:}" "inventory-tracker" "every 6h" "Check inventory levels. Alert if less than 10 units. Calculate days until stockout."
+create_job 8643 "${PROFILES[storeops]##*:}" "analytics-digest" "0 9 * * *" "Daily analytics: revenue, orders, conversion, top products."
+create_job 8643 "${PROFILES[storeops]##*:}" "revenue-tracker" "0 22 * * *" "Reconcile today revenue, refunds, net revenue, margins."
+
+# Marketing jobs
+create_job 8644 "${PROFILES[marketing]##*:}" "social-media-scheduler" "0 9 * * *" "Plan today social content: 2-3 products, platform-specific posts, hashtags."
+create_job 8644 "${PROFILES[marketing]##*:}" "engagement-responder" "every 30m" "Check new comments and DMs. Draft replies matching brand voice."
+create_job 8644 "${PROFILES[marketing]##*:}" "content-calendar" "0 8 * * 1" "Plan week content: themes, topics, products, posting schedule."
+
+# Customer jobs
+create_job 8645 "${PROFILES[customer]##*:}" "support-watcher" "every 15m" "Check new support messages. Categorize and draft responses."
+create_job 8645 "${PROFILES[customer]##*:}" "review-manager" "0 10 * * *" "Check new reviews. Analyze sentiment. Draft replies."
+create_job 8645 "${PROFILES[customer]##*:}" "brand-audit" "0 12 * * 1" "Audit week content for brand voice consistency."
+
+# Pause all jobs (user enables from UI)
+echo ""
+echo "Pausing all jobs (enable from UI)..."
+for dept in storeops marketing customer; do
+  IFS=':' read -r port key <<< "${PROFILES[$dept]}"
+  for id in $(curl -s "http://127.0.0.1:$port/api/jobs" -H "Authorization: Bearer $key" | grep -o '"id":"[^"]*"' | cut -d'"' -f4); do
+    curl -s --max-time 5 -X POST "http://127.0.0.1:$port/api/jobs/$id/pause" \
+      -H "Authorization: Bearer $key" > /dev/null 2>&1
+  done
+  echo "  Paused all $dept jobs"
+done
+
+echo ""
+echo "=========================================="
+echo "  HermesStore is READY"
+echo ""
+echo "  Brain:     http://localhost:8642"
+echo "  Store Ops: http://localhost:8643"
+echo "  Marketing: http://localhost:8644"
+echo "  Customer:  http://localhost:8645"
+echo "  Frontend:  http://localhost:3000"
+echo ""
+echo "  11 cron jobs created (all paused)"
+echo "  Enable from: http://localhost:3000/cron"
+echo "=========================================="

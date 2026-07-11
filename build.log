@@ -7,26 +7,33 @@ npm warn invalid config Must be one or more of: dev, optional, peer
    ▲ Next.js 15.5.20
 
    Creating an optimized production build ...
- ✓ Compiled successfully in 5.8s
+ ✓ Compiled successfully in 10.2s
    Linting and checking validity of types ...
    Collecting page data ...
-   Generating static pages (0/10) ...
-   Generating static pages (2/10) 
-   Generating static pages (4/10) 
-   Generating static pages (7/10) 
- ✓ Generating static pages (10/10)
+   Generating static pages (0/14) ...
+   Generating static pages (3/14) 
+   Generating static pages (6/14) 
+   Generating static pages (10/14) 
+ ✓ Generating static pages (14/14)
    Finalizing page optimization ...
    Collecting build traces ...
 
 Route (app)                                 Size  First Load JS
 ┌ ○ /                                    6.11 kB         121 kB
 ├ ○ /_not-found                            994 B         103 kB
-├ ○ /agents                              6.18 kB         121 kB
-├ ƒ /api/hermes/[...path]                  123 B         103 kB
-├ ○ /marketing                           6.91 kB         122 kB
-├ ○ /products                            5.82 kB         127 kB
+├ ○ /agents                              4.92 kB         120 kB
+├ ƒ /api/agents                            137 B         103 kB
+├ ƒ /api/agents/[id]                       137 B         103 kB
+├ ƒ /api/agents/[id]/soul                  137 B         103 kB
+├ ƒ /api/cron                              137 B         103 kB
+├ ƒ /api/cron/[id]                         137 B         103 kB
+├ ƒ /api/cron/create                       137 B         103 kB
+├ ƒ /api/hermes/[...path]                  137 B         103 kB
+├ ○ /cron                                4.48 kB         122 kB
+├ ○ /marketing                           3.31 kB         122 kB
+├ ○ /products                            2.38 kB         126 kB
 ├ ○ /products/add                        4.62 kB         125 kB
-└ ○ /settings                            3.64 kB         121 kB
+└ ○ /settings                            3.66 kB         121 kB
 + First Load JS shared by all             102 kB
   ├ chunks/255-3981a3d1f3561bd8.js       46.2 kB
   ├ chunks/4bd1b696-c023c6e3521b1417.js  54.2 kB
