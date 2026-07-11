@@ -4,7 +4,7 @@ import { useChatStore } from "@/lib/store";
 import { MessageList } from "./MessageList";
 import { ChatInput } from "./ChatInput";
 import { useEffect } from "react";
-import { Bot, Wifi, WifiOff, LayoutDashboard, Package, Megaphone } from "lucide-react";
+import { Bot, Wifi, WifiOff, LayoutDashboard, Package, Megaphone, Settings } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -12,6 +12,8 @@ const navItems = [
   { href: "/", label: "Dashboard", icon: LayoutDashboard },
   { href: "/products", label: "Products", icon: Package },
   { href: "/marketing", label: "Marketing", icon: Megaphone },
+  { href: "/agents", label: "Agents", icon: Bot },
+  { href: "/settings", label: "Settings", icon: Settings },
 ];
 
 export function ChatSidebar() {

@@ -36,6 +36,7 @@ AI-powered ecommerce store manager. One chat interface controls an entire Shopif
 - [x] PROMPT-5 marketing — DONE (2026-07-11). Campaigns, social posts, AI suggestions. Build passes.
 - [x] PROMPT-6 agents — DONE (2026-07-11). 9 agents, department filter, activity log. Build passes.
 - [x] PROMPT-7 polish — DONE (2026-07-11). DepartmentCard (Fulfillment/Finance/Analytics "Coming Soon"). Build passes.
+- [x] PROMPT-8 settings — DONE (2026-07-11). ApprovalDialog, /settings page, sidebar nav updated. Build passes.
 - [ ] Products
 - [ ] Marketing
 - [ ] Agents
