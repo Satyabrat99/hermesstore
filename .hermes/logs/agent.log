@@ -1,0 +1,31 @@
+2026-07-11 23:44:29,892 INFO gateway.run: Starting Hermes Gateway...
+2026-07-11 23:44:29,905 INFO gateway.run: Session storage: C:\Users\satya\HermesStore\.hermes\sessions
+2026-07-11 23:44:29,909 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-07-11 23:44:29,912 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-07-11 23:44:29,930 WARNING gateway.run: No env user allowlists configured. Messaging platforms default to pairing/allowlist policies and will deny unknown senders unless you configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id) or explicitly opt in with GATEWAY_ALLOW_ALL_USERS=true plus dm_policy/group_policy: open on the platform.
+2026-07-11 23:44:30,045 INFO gateway.run: Connecting to api_server...
+2026-07-11 23:44:31,119 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8642 (model: hermes-agent)
+2026-07-11 23:44:31,149 INFO gateway.run: ✓ api_server connected
+2026-07-11 23:44:31,168 INFO gateway.run: Gateway running with 1 platform(s)
+2026-07-11 23:44:31,178 INFO gateway.run: Channel directory built: 0 target(s)
+2026-07-11 23:44:32,196 INFO gateway.run: Press Ctrl+C to stop
+2026-07-11 23:44:32,209 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-07-11 23:44:32,213 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-07-11 23:44:32,238 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes\kanban\.dispatcher.lock)
+2026-07-11 23:44:37,228 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-07-11 23:44:43,895 INFO aiohttp.access: 127.0.0.1 [11/Jul/2026:23:44:43 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.19.0"
+2026-07-11 23:44:51,961 INFO run_agent: Loaded environment variables from C:\Users\satya\HermesStore\.hermes\.env
+2026-07-11 23:44:56,526 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=asyncio_1:388 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-11 23:44:56,738 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-07-11 23:44:56,810 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-07-11 23:44:58,966 INFO agent.auxiliary_client: Vision auto-detect: using main provider xiaomi (mimo-v2.5)
+2026-07-11 23:44:59,598 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-07-11 23:45:00,168 INFO agent.auxiliary_client: Vision auto-detect: using main provider xiaomi (mimo-v2.5)
+2026-07-11 23:45:00,216 WARNING tools.registry: check_fn check_web_api_key returned False; dependent tools will be unavailable this turn
+2026-07-11 23:45:02,014 INFO [api-92aff712ee69ec12] agent.turn_context: conversation turn: session=api-92aff712ee69ec12 model=mimo-v2.5-pro provider=xiaomi platform=api_server history=0 msg='Say hello in 5 words'
+2026-07-11 23:45:05,323 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-13 (_call):24400 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-11 23:45:08,380 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-13 (_call):24400 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-11 23:45:08,382 INFO [api-92aff712ee69ec12] agent.conversation_loop: API call #1: model=mimo-v2.5-pro provider=xiaomi in=15079 out=22 total=15101 latency=3.6s cache=2048/15079 (14%)
+2026-07-11 23:45:09,190 INFO [api-92aff712ee69ec12] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=mimo-v2.5-pro api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=25 session=api-92aff712ee69ec12
+2026-07-11 23:45:09,202 INFO aiohttp.access: 127.0.0.1 [11/Jul/2026:23:44:51 +0530] "POST /v1/chat/completions HTTP/1.1" 200 838 "-" "curl/8.19.0"
+2026-07-11 23:45:17,010 INFO aiohttp.access: 127.0.0.1 [11/Jul/2026:23:45:17 +0530] "GET /v1/models HTTP/1.1" 200 655 "-" "curl/8.19.0"

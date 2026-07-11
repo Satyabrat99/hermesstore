@@ -4,7 +4,6 @@ import "./globals.css";
 import { ChatSidebar } from "@/components/chat/ChatSidebar";
 
 const inter = Inter({
-  variable: "--font-sans",
   subsets: ["latin"],
 });
 
@@ -20,11 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.variable} antialiased`}>
-        <div className="flex">
-          <ChatSidebar />
-          <main className="flex-1 bg-obsidian min-h-screen">{children}</main>
-        </div>
+      <body className={`${inter.className} antialiased`}>
+        <ChatSidebar />
+        <main className="ml-[400px] bg-obsidian min-h-screen">{children}</main>
       </body>
     </html>
   );

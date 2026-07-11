@@ -1,0 +1,18 @@
+# HermesStore — Project-local Hermes config
+# Separate from user's global hermes
+
+model:
+  provider: xiaomi
+  model: mimo-v2.5-pro
+
+terminal:
+  cwd: C:\Users\satya\HermesStore
+
+mcp_servers: {}
+# shopify:
+#   command: "npx"
+#   args: ["@den.dance/shopify-mcp-pro"]
+#   env:
+#     SHOPIFY_STORE_DOMAIN: "your-store.myshopify.com"
+#     SHOPIFY_CLIENT_ID: "xxx"
+#     SHOPIFY_CLIENT_SECRET: "xxx"

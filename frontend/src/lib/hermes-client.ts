@@ -1,5 +1,5 @@
 const HERMES_URL = process.env.NEXT_PUBLIC_HERMES_URL || "http://localhost:8642";
-const HERMES_KEY = process.env.NEXT_PUBLIC_HERMES_KEY || "hermesstore-dev-2026";
+const HERMES_KEY = process.env.NEXT_PUBLIC_HERMES_KEY || "hermesstore-app-2026-secret-key-32c";
 
 // In dev, requests go through the Next.js rewrite proxy (/hermes/*) to avoid CORS.
 // In production with a public Hermes URL, NEXT_PUBLIC_HERMES_URL can be set directly.
@@ -32,7 +32,7 @@ export async function chat(
       Authorization: `Bearer ${HERMES_KEY}`,
     },
     body: JSON.stringify({
-      model: "hermesstore",
+      model: "hermes-agent",
       messages,
       stream: true,
     }),

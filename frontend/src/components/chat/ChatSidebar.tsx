@@ -27,7 +27,7 @@ export function ChatSidebar() {
   }, [checkConnection]);
 
   return (
-    <div className="flex flex-col h-screen w-[400px] border-r border-charcoal bg-obsidian">
+    <div className="fixed inset-y-0 left-0 flex flex-col w-[400px] border-r border-charcoal bg-obsidian z-40">
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-charcoal">
         <div className="flex items-center gap-2">

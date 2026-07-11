@@ -4,8 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:full": "node ../scripts/start-hermes.js & next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "node ../scripts/start-hermes.js & next start",
+    "start:hermes": "node ../scripts/start-hermes.js",
+    "start:clean": "node ../scripts/start-hermes.js & next start"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",
