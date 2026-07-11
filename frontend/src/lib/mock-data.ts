@@ -1,4 +1,4 @@
-import { Product, Order } from "./types";
+import { Product, Order, Campaign, SocialPost } from "./types";
 
 export const mockProducts: Product[] = [
   {
@@ -118,4 +118,86 @@ export const mockOrders: Order[] = [
   { id: "3", orderNumber: "#1003", customer: "Amit Kumar", total: 7499, status: "processing", items: 1, createdAt: "2026-07-11" },
   { id: "4", orderNumber: "#1004", customer: "Sneha Gupta", total: 5398, status: "pending", items: 3, createdAt: "2026-07-11" },
   { id: "5", orderNumber: "#1005", customer: "Vikram Singh", total: 8999, status: "pending", items: 1, createdAt: "2026-07-11" },
+];
+
+export const mockCampaigns: Campaign[] = [
+  {
+    id: "1",
+    name: "Summer Sale 2026",
+    type: "social",
+    status: "active",
+    platform: "Instagram",
+    reach: 12500,
+    engagement: 890,
+    conversions: 47,
+    createdAt: "2026-07-08",
+  },
+  {
+    id: "2",
+    name: "New Arrivals Email",
+    type: "email",
+    status: "completed",
+    reach: 3200,
+    engagement: 640,
+    conversions: 23,
+    createdAt: "2026-07-05",
+  },
+  {
+    id: "3",
+    name: "Google Shopping Ads",
+    type: "ad",
+    status: "active",
+    platform: "Google",
+    reach: 45000,
+    engagement: 2100,
+    conversions: 89,
+    createdAt: "2026-07-01",
+  },
+  {
+    id: "4",
+    name: "Flash Sale Announcement",
+    type: "social",
+    status: "scheduled",
+    platform: "Twitter",
+    reach: 0,
+    engagement: 0,
+    conversions: 0,
+    createdAt: "2026-07-11",
+  },
+];
+
+export const mockSocialPosts: SocialPost[] = [
+  {
+    id: "1",
+    platform: "instagram",
+    content: "🔥 Summer Sale is LIVE! Up to 40% off on all sneakers. Link in bio!",
+    image: "https://placehold.co/600x600/1a1a2e/ffffff?text=Summer+Sale",
+    status: "published",
+    likes: 234,
+    comments: 18,
+    shares: 12,
+  },
+  {
+    id: "2",
+    platform: "twitter",
+    content: "New drop alert 🚀 Handmade Jaipur Pottery now available. Each piece unique. #Handmade #Jaipur",
+    status: "published",
+    likes: 89,
+    comments: 7,
+    shares: 23,
+  },
+  {
+    id: "3",
+    platform: "instagram",
+    content: "Behind the scenes: How our leather bags are made 🎥 Full reel coming soon!",
+    image: "https://placehold.co/600x600/1a1a2e/ffffff?text=BTS+Reel",
+    status: "scheduled",
+    scheduledFor: "2026-07-12 09:00",
+  },
+  {
+    id: "4",
+    platform: "linkedin",
+    content: "We're hiring! Looking for a growth marketer to join our team. DM for details.",
+    status: "draft",
+  },
 ];

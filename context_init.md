@@ -33,6 +33,7 @@ AI-powered ecommerce store manager. One chat interface controls an entire Shopif
 - [x] PROMPT-2 dashboard — DONE (2026-07-11). MetricCards, AgentActivity, AlertsPanel, QuickActions. Build passes.
 - [x] PROMPT-3 products — DONE (2026-07-11). ProductCard, products grid, search, filters, sidebar nav. Build passes.
 - [x] PROMPT-4 add product — DONE (2026-07-11). /products/add with text/image/voice input, AI generate, publish flow. Build passes.
+- [x] PROMPT-5 marketing — DONE (2026-07-11). Campaigns, social posts, AI suggestions. Build passes.
 - [ ] Products
 - [ ] Marketing
 - [ ] Agents
