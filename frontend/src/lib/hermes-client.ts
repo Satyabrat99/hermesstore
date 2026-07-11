@@ -1,6 +1,6 @@
-// Always use the Next.js proxy (/hermes/*) to avoid browser CORS.
-// The proxy rewrites /hermes/:path* -> http://localhost:8642/:path*.
-const BASE = "/hermes";
+// Use the Next.js API route proxy (/api/hermes/*) which strips the Origin header
+// to avoid 403 from the Hermes gateway.
+const BASE = "/api/hermes";
 const HERMES_KEY = process.env.NEXT_PUBLIC_HERMES_KEY || "hermesstore-app-2026-secret-key-32c";
 
 export interface Message {
