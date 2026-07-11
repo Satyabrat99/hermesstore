@@ -4,10 +4,19 @@ import { useChatStore } from "@/lib/store";
 import { MessageList } from "./MessageList";
 import { ChatInput } from "./ChatInput";
 import { useEffect } from "react";
-import { Bot, Wifi, WifiOff } from "lucide-react";
+import { Bot, Wifi, WifiOff, LayoutDashboard, Package, Megaphone } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const navItems = [
+  { href: "/", label: "Dashboard", icon: LayoutDashboard },
+  { href: "/products", label: "Products", icon: Package },
+  { href: "/marketing", label: "Marketing", icon: Megaphone },
+];
 
 export function ChatSidebar() {
-  const { isConnected, checkConnection, isLoading } = useChatStore();
+  const { isConnected, checkConnection } = useChatStore();
+  const pathname = usePathname();
 
   useEffect(() => {
     checkConnection();
@@ -33,6 +42,30 @@ export function ChatSidebar() {
             {isConnected ? "Connected" : "Disconnected"}
           </span>
         </div>
+      </div>
+
+      {/* Navigation */}
+      <div className="p-2 border-b border-zinc-800">
+        <nav className="flex flex-col gap-1">
+          {navItems.map((item) => {
+            const Icon = item.icon;
+            const isActive = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm transition-colors ${
+                  isActive
+                    ? "bg-zinc-800 text-white"
+                    : "text-zinc-400 hover:text-white hover:bg-zinc-800/50"
+                }`}
+              >
+                <Icon className="w-4 h-4" />
+                {item.label}
+              </Link>
+            );
+          })}
+        </nav>
       </div>
 
       {/* Messages */}
