@@ -20,22 +20,22 @@ import {
 import { useState } from "react";
 
 const statusConfig = {
-  active: { icon: CheckCircle2, color: "text-green-500", bg: "bg-green-500/10" },
-  idle: { icon: Clock, color: "text-zinc-500", bg: "bg-zinc-500/10" },
-  running: { icon: Loader2, color: "text-blue-500", bg: "bg-blue-500/10" },
+  active: { icon: CheckCircle2, color: "text-phosphor", bg: "bg-phosphor/10" },
+  idle: { icon: Clock, color: "text-smoke", bg: "bg-smoke/10" },
+  running: { icon: Loader2, color: "text-phosphor", bg: "bg-phosphor/10" },
   error: { icon: AlertCircle, color: "text-red-500", bg: "bg-red-500/10" },
   paused: { icon: Pause, color: "text-yellow-500", bg: "bg-yellow-500/10" },
 };
 
 const departmentColors = {
-  brain: "bg-purple-500/10 text-purple-500 border-purple-500/20",
-  storeops: "bg-blue-500/10 text-blue-500 border-blue-500/20",
-  marketing: "bg-pink-500/10 text-pink-500 border-pink-500/20",
-  "customer-brand": "bg-green-500/10 text-green-500 border-green-500/20",
+  brain: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+  storeops: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+  marketing: "bg-pink-500/10 text-pink-400 border-pink-500/20",
+  "customer-brand": "bg-phosphor/10 text-phosphor border-phosphor/20",
 };
 
 const resultConfig = {
-  success: { icon: CheckCircle2, color: "text-green-500" },
+  success: { icon: CheckCircle2, color: "text-phosphor" },
   error: { icon: AlertCircle, color: "text-red-500" },
   warning: { icon: AlertCircle, color: "text-yellow-500" },
 };
@@ -51,21 +51,19 @@ export default function AgentsPage() {
 
   return (
     <div className="p-6 space-y-6">
-      {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-white">Agents</h1>
-          <p className="text-sm text-zinc-400 mt-1">
+          <h1 className="text-2xl font-medium text-snow">Agents</h1>
+          <p className="text-sm text-silver mt-1">
             {mockAgents.length} agents · {activeAgents} active · {(totalTokens / 1000).toFixed(1)}K tokens today
           </p>
         </div>
-        <Button variant="outline" className="border-zinc-700 text-zinc-300">
+        <Button variant="outline" className="border-charcoal text-silver rounded-full">
           <Settings className="w-4 h-4 mr-2" />
           Configure
         </Button>
       </div>
 
-      {/* Stats */}
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
         {[
           { label: "Total Agents", value: mockAgents.length.toString(), icon: Bot },
@@ -75,18 +73,17 @@ export default function AgentsPage() {
         ].map((stat) => {
           const Icon = stat.icon;
           return (
-            <Card key={stat.label} className="bg-zinc-900 border-zinc-800 p-4">
+            <Card key={stat.label} className="bg-obsidian border-charcoal rounded-2xl p-4">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-zinc-400 text-sm">{stat.label}</span>
-                <Icon className="w-4 h-4 text-zinc-500" />
+                <span className="text-silver text-sm">{stat.label}</span>
+                <Icon className="w-4 h-4 text-smoke" />
               </div>
-              <div className="text-xl font-bold text-white">{stat.value}</div>
+              <div className="text-xl font-medium text-snow">{stat.value}</div>
             </Card>
           );
         })}
       </div>
 
-      {/* Department Filter */}
       <div className="flex gap-2">
         {departments.map((dept) => (
           <Button
@@ -96,8 +93,8 @@ export default function AgentsPage() {
             onClick={() => setFilter(dept)}
             className={
               filter === dept
-                ? "bg-blue-600 text-white"
-                : "border-zinc-800 text-zinc-400 hover:bg-zinc-800"
+                ? "bg-phosphor text-obsidian rounded-full"
+                : "border-charcoal text-silver hover:bg-ash rounded-full"
             }
           >
             {dept === "all" ? "All" : dept === "customer-brand" ? "Customer/Brand" : dept.charAt(0).toUpperCase() + dept.slice(1)}
@@ -106,34 +103,33 @@ export default function AgentsPage() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Agent List (2/3) */}
         <div className="lg:col-span-2">
-          <Card className="bg-zinc-900 border-zinc-800">
-            <div className="divide-y divide-zinc-800">
+          <Card className="bg-obsidian border-charcoal rounded-2xl">
+            <div className="divide-y divide-charcoal">
               {filtered.map((agent) => {
                 const config = statusConfig[agent.status];
                 const Icon = config.icon;
                 return (
-                  <div key={agent.id} className="p-4 hover:bg-zinc-800/30 transition-colors">
+                  <div key={agent.id} className="p-4 hover:bg-ash/30 transition-colors">
                     <div className="flex items-start justify-between">
                       <div className="flex items-start gap-3">
-                        <div className={`mt-0.5 p-2 rounded-lg ${config.bg}`}>
+                        <div className={`mt-0.5 p-2 rounded-xl ${config.bg}`}>
                           <Icon
                             className={`w-4 h-4 ${config.color} ${agent.status === "running" ? "animate-spin" : ""}`}
                           />
                         </div>
                         <div>
                           <div className="flex items-center gap-2 mb-1">
-                            <span className="text-sm font-medium text-white">{agent.name}</span>
-                            <Badge variant="outline" className={departmentColors[agent.department]}>
+                            <span className="text-sm font-medium text-snow">{agent.name}</span>
+                            <Badge variant="outline" className={`rounded-full ${departmentColors[agent.department]}`}>
                               {agent.department}
                             </Badge>
-                            <Badge variant="outline" className="text-xs border-zinc-700 text-zinc-400">
+                            <Badge variant="outline" className="text-xs border-charcoal text-smoke rounded-full">
                               {agent.type}
                             </Badge>
                           </div>
-                          <p className="text-xs text-zinc-500 mb-2">{agent.description}</p>
-                          <div className="flex gap-4 text-xs text-zinc-500">
+                          <p className="text-xs text-smoke mb-2">{agent.description}</p>
+                          <div className="flex gap-4 text-xs text-smoke">
                             {agent.schedule && (
                               <span className="flex items-center gap-1">
                                 <Clock className="w-3 h-3" /> {agent.schedule}
@@ -149,7 +145,7 @@ export default function AgentsPage() {
                       </div>
                       <div className="flex gap-1">
                         {agent.status === "paused" ? (
-                          <Button variant="ghost" size="sm" className="h-7 text-green-400 hover:text-green-300">
+                          <Button variant="ghost" size="sm" className="h-7 text-phosphor hover:text-mint">
                             <Play className="w-3 h-3" />
                           </Button>
                         ) : (
@@ -157,7 +153,7 @@ export default function AgentsPage() {
                             <Pause className="w-3 h-3" />
                           </Button>
                         )}
-                        <Button variant="ghost" size="sm" className="h-7 text-zinc-400 hover:text-white">
+                        <Button variant="ghost" size="sm" className="h-7 text-smoke hover:text-snow">
                           <Settings className="w-3 h-3" />
                         </Button>
                       </div>
@@ -169,13 +165,12 @@ export default function AgentsPage() {
           </Card>
         </div>
 
-        {/* Activity Log (1/3) */}
         <div>
-          <Card className="bg-zinc-900 border-zinc-800">
-            <div className="p-4 border-b border-zinc-800">
-              <h2 className="text-lg font-semibold text-white">Activity Log</h2>
+          <Card className="bg-obsidian border-charcoal rounded-2xl">
+            <div className="p-4 border-b border-charcoal">
+              <h2 className="text-lg font-medium text-snow">Activity Log</h2>
             </div>
-            <div className="divide-y divide-zinc-800">
+            <div className="divide-y divide-charcoal">
               {mockAgentLogs.map((log) => {
                 const config = resultConfig[log.result];
                 const Icon = config.icon;
@@ -185,12 +180,12 @@ export default function AgentsPage() {
                       <Icon className={`w-3 h-3 mt-1 ${config.color}`} />
                       <div>
                         <div className="flex items-center gap-2 mb-0.5">
-                          <span className="text-xs font-medium text-white">{log.agentName}</span>
-                          <span className="text-xs text-zinc-600">{log.timestamp}</span>
+                          <span className="text-xs font-medium text-snow">{log.agentName}</span>
+                          <span className="text-xs text-graphite">{log.timestamp}</span>
                         </div>
-                        <p className="text-xs text-zinc-400">{log.action}</p>
+                        <p className="text-xs text-silver">{log.action}</p>
                         {log.details && (
-                          <p className="text-xs text-zinc-500 mt-1">{log.details}</p>
+                          <p className="text-xs text-smoke mt-1">{log.details}</p>
                         )}
                       </div>
                     </div>

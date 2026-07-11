@@ -10,18 +10,15 @@ import { Truck, DollarSign, BarChart3 } from "lucide-react";
 export default function Home() {
   return (
     <div className="p-6 space-y-6">
-      {/* Header */}
       <div>
-        <h1 className="text-2xl font-bold text-white">Dashboard</h1>
-        <p className="text-sm text-zinc-400 mt-1">
+        <h1 className="text-2xl font-medium text-snow">Dashboard</h1>
+        <p className="text-sm text-silver mt-1">
           Welcome back. Here&apos;s your store overview.
         </p>
       </div>
 
-      {/* Metric Cards */}
       <MetricCards />
 
-      {/* Main Content Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
           <AgentActivity />
@@ -32,9 +29,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Coming Soon Departments */}
       <div>
-        <h2 className="text-lg font-semibold text-white mb-4">More Departments</h2>
+        <h2 className="text-lg font-medium text-snow mb-4">More Departments</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <DepartmentCard
             name="Fulfillment"
@@ -46,9 +42,9 @@ export default function Home() {
           <DepartmentCard
             name="Finance"
             description="Revenue tracking, tax calculation, and cash flow forecasting"
-            icon={<DollarSign className="w-5 h-5 text-emerald-500" />}
+            icon={<DollarSign className="w-5 h-5 text-phosphor" />}
             features={["Revenue reconciliation", "GST calculation", "Cash flow forecast", "Profit margins"]}
-            color="bg-emerald-500/10"
+            color="bg-phosphor/10"
           />
           <DepartmentCard
             name="Analytics"

@@ -46,21 +46,21 @@ export function MetricCards() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       {metrics.map((metric) => (
-        <Card key={metric.label} className="bg-zinc-900 border-zinc-800 p-4">
+        <Card key={metric.label} className="bg-obsidian border-charcoal rounded-2xl p-4">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-zinc-400 text-sm">{metric.label}</span>
-            <span className="text-zinc-500">{metric.icon}</span>
+            <span className="text-silver text-sm">{metric.label}</span>
+            <span className="text-smoke">{metric.icon}</span>
           </div>
-          <div className="text-2xl font-bold text-white">{metric.value}</div>
+          <div className="text-2xl font-medium text-snow">{metric.value}</div>
           <div className="flex items-center gap-1 mt-1">
             {metric.trend === "up" ? (
-              <TrendingUp className="w-3 h-3 text-green-500" />
+              <TrendingUp className="w-3 h-3 text-phosphor" />
             ) : (
               <TrendingDown className="w-3 h-3 text-red-500" />
             )}
             <span
               className={`text-xs ${
-                metric.trend === "up" ? "text-green-500" : "text-red-500"
+                metric.trend === "up" ? "text-phosphor" : "text-red-500"
               }`}
             >
               {metric.change} vs last week

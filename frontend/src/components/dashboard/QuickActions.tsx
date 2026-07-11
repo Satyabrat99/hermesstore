@@ -45,22 +45,22 @@ const actions: QuickAction[] = [
 
 export function QuickActions() {
   return (
-    <Card className="bg-zinc-900 border-zinc-800">
-      <div className="p-4 border-b border-zinc-800">
-        <h2 className="text-lg font-semibold text-white">Quick Actions</h2>
+    <Card className="bg-obsidian border-charcoal rounded-2xl">
+      <div className="p-4 border-b border-charcoal">
+        <h2 className="text-lg font-medium text-snow">Quick Actions</h2>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 p-4">
         {actions.map((action) => (
           <Button
             key={action.label}
             variant="outline"
-            className="h-auto flex-col items-start gap-1 p-3 border-zinc-800 bg-zinc-800/50 hover:bg-zinc-800 text-left"
+            className="h-auto flex-col items-start gap-1 p-3 border-charcoal bg-ash/50 hover:bg-ash text-snow rounded-2xl text-left"
           >
-            <div className="flex items-center gap-2 text-white">
+            <div className="flex items-center gap-2 text-snow">
               {action.icon}
               <span className="text-sm font-medium">{action.label}</span>
             </div>
-            <span className="text-xs text-zinc-500">{action.description}</span>
+            <span className="text-xs text-smoke">{action.description}</span>
           </Button>
         ))}
       </div>

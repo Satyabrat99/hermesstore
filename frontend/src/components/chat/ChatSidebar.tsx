@@ -27,27 +27,27 @@ export function ChatSidebar() {
   }, [checkConnection]);
 
   return (
-    <div className="flex flex-col h-screen w-[400px] border-r border-zinc-800 bg-zinc-950">
+    <div className="flex flex-col h-screen w-[400px] border-r border-charcoal bg-obsidian">
       {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b border-zinc-800">
+      <div className="flex items-center justify-between p-4 border-b border-charcoal">
         <div className="flex items-center gap-2">
-          <Bot className="w-5 h-5 text-blue-500" />
-          <span className="font-semibold text-white">HermesStore</span>
+          <Bot className="w-5 h-5 text-phosphor" />
+          <span className="font-medium text-snow">HermesStore</span>
         </div>
         <div className="flex items-center gap-1">
           {isConnected ? (
-            <Wifi className="w-4 h-4 text-green-500" />
+            <Wifi className="w-4 h-4 text-phosphor" />
           ) : (
-            <WifiOff className="w-4 h-4 text-red-500" />
+            <WifiOff className="w-4 h-4 text-smoke" />
           )}
-          <span className="text-xs text-zinc-400">
+          <span className="text-xs text-smoke">
             {isConnected ? "Connected" : "Disconnected"}
           </span>
         </div>
       </div>
 
       {/* Navigation */}
-      <div className="p-2 border-b border-zinc-800">
+      <div className="p-2 border-b border-charcoal">
         <nav className="flex flex-col gap-1">
           {navItems.map((item) => {
             const Icon = item.icon;
@@ -56,13 +56,13 @@ export function ChatSidebar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm transition-colors ${
+                className={`flex items-center gap-2 px-3 py-2 rounded-full text-sm transition-colors ${
                   isActive
-                    ? "bg-zinc-800 text-white"
-                    : "text-zinc-400 hover:text-white hover:bg-zinc-800/50"
+                    ? "bg-ash text-snow"
+                    : "text-silver hover:text-snow hover:bg-ash/50"
                 }`}
               >
-                <Icon className="w-4 h-4" />
+                <Icon className={`w-4 h-4 ${isActive ? "text-phosphor" : ""}`} />
                 {item.label}
               </Link>
             );

@@ -49,26 +49,26 @@ const alerts: Alert[] = [
 ];
 
 const typeConfig = {
-  warning: { icon: AlertTriangle, color: "text-yellow-500", border: "border-yellow-500/20" },
-  info: { icon: Bell, color: "text-blue-500", border: "border-blue-500/20" },
-  success: { icon: CheckCircle, color: "text-green-500", border: "border-green-500/20" },
+  warning: { icon: AlertTriangle, color: "text-yellow-500", border: "border-l-yellow-500" },
+  info: { icon: Bell, color: "text-phosphor", border: "border-l-phosphor" },
+  success: { icon: CheckCircle, color: "text-phosphor", border: "border-l-phosphor" },
 };
 
 export function AlertsPanel() {
   return (
-    <Card className="bg-zinc-900 border-zinc-800">
-      <div className="p-4 border-b border-zinc-800">
+    <Card className="bg-obsidian border-charcoal rounded-2xl">
+      <div className="p-4 border-b border-charcoal">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Bell className="w-5 h-5 text-yellow-500" />
-            <h2 className="text-lg font-semibold text-white">Alerts</h2>
+            <h2 className="text-lg font-medium text-snow">Alerts</h2>
           </div>
-          <Badge variant="outline" className="border-zinc-700 text-zinc-400">
+          <Badge variant="outline" className="border-charcoal text-smoke">
             {alerts.length} active
           </Badge>
         </div>
       </div>
-      <div className="divide-y divide-zinc-800">
+      <div className="divide-y divide-charcoal">
         {alerts.map((alert) => {
           const config = typeConfig[alert.type];
           const Icon = config.icon;
@@ -79,22 +79,22 @@ export function AlertsPanel() {
                   <Icon className={`w-4 h-4 mt-0.5 ${config.color}`} />
                   <div>
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-sm font-medium text-white">{alert.title}</span>
-                      <span className="text-xs text-zinc-500">{alert.time}</span>
+                      <span className="text-sm font-medium text-snow">{alert.title}</span>
+                      <span className="text-xs text-smoke">{alert.time}</span>
                     </div>
-                    <p className="text-sm text-zinc-400">{alert.description}</p>
+                    <p className="text-sm text-silver">{alert.description}</p>
                     {alert.action && (
                       <Button
                         variant="outline"
                         size="sm"
-                        className="mt-2 h-7 text-xs border-zinc-700 text-zinc-300 hover:bg-zinc-800"
+                        className="mt-2 h-7 text-xs border-charcoal text-silver hover:bg-ash rounded-full"
                       >
                         {alert.action}
                       </Button>
                     )}
                   </div>
                 </div>
-                <button className="text-zinc-500 hover:text-zinc-300">
+                <button className="text-smoke hover:text-snow">
                   <X className="w-4 h-4" />
                 </button>
               </div>

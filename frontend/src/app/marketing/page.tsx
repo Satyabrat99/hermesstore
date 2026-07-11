@@ -37,31 +37,29 @@ const platformColors = {
 };
 
 const statusColors = {
-  active: "bg-green-500/10 text-green-500 border-green-500/20",
-  scheduled: "bg-blue-500/10 text-blue-500 border-blue-500/20",
-  completed: "bg-zinc-500/10 text-zinc-500 border-zinc-500/20",
+  active: "bg-phosphor/10 text-phosphor border-phosphor/20",
+  scheduled: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+  completed: "bg-smoke/10 text-smoke border-smoke/20",
   draft: "bg-yellow-500/10 text-yellow-500 border-yellow-500/20",
-  published: "bg-green-500/10 text-green-500 border-green-500/20",
+  published: "bg-phosphor/10 text-phosphor border-phosphor/20",
 };
 
 export default function MarketingPage() {
   return (
     <div className="p-6 space-y-6">
-      {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-white">Marketing</h1>
-          <p className="text-sm text-zinc-400 mt-1">
+          <h1 className="text-2xl font-medium text-snow">Marketing</h1>
+          <p className="text-sm text-silver mt-1">
             Manage campaigns, social media, and email marketing
           </p>
         </div>
-        <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+        <Button className="bg-phosphor hover:bg-mint text-obsidian rounded-full font-medium">
           <Plus className="w-4 h-4 mr-2" />
           Create Campaign
         </Button>
       </div>
 
-      {/* Stats Row */}
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
         {[
           { label: "Total Reach", value: "60,700", icon: Users, change: "+18%" },
@@ -71,14 +69,14 @@ export default function MarketingPage() {
         ].map((stat) => {
           const Icon = stat.icon;
           return (
-            <Card key={stat.label} className="bg-zinc-900 border-zinc-800 p-4">
+            <Card key={stat.label} className="bg-obsidian border-charcoal rounded-2xl p-4">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-zinc-400 text-sm">{stat.label}</span>
-                <Icon className="w-4 h-4 text-zinc-500" />
+                <span className="text-silver text-sm">{stat.label}</span>
+                <Icon className="w-4 h-4 text-smoke" />
               </div>
-              <div className="text-xl font-bold text-white">{stat.value}</div>
+              <div className="text-xl font-medium text-snow">{stat.value}</div>
               {stat.change && (
-                <span className="text-xs text-green-500">{stat.change} this month</span>
+                <span className="text-xs text-phosphor">{stat.change} this month</span>
               )}
             </Card>
           );
@@ -86,43 +84,41 @@ export default function MarketingPage() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Campaigns (2/3) */}
         <div className="lg:col-span-2 space-y-6">
-          {/* Campaigns */}
-          <Card className="bg-zinc-900 border-zinc-800">
-            <div className="p-4 border-b border-zinc-800 flex items-center justify-between">
-              <h2 className="text-lg font-semibold text-white">Campaigns</h2>
-              <Button variant="outline" size="sm" className="border-zinc-700 text-zinc-300">
+          <Card className="bg-obsidian border-charcoal rounded-2xl">
+            <div className="p-4 border-b border-charcoal flex items-center justify-between">
+              <h2 className="text-lg font-medium text-snow">Campaigns</h2>
+              <Button variant="outline" size="sm" className="border-charcoal text-silver rounded-full">
                 <BarChart3 className="w-4 h-4 mr-2" />
                 View All
               </Button>
             </div>
-            <div className="divide-y divide-zinc-800">
+            <div className="divide-y divide-charcoal">
               {mockCampaigns.map((campaign) => (
                 <div key={campaign.id} className="p-4 flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-zinc-800">
+                    <div className="p-2 rounded-xl bg-ash">
                       {campaign.type === "social" ? (
                         <Camera className="w-4 h-4 text-pink-500" />
                       ) : campaign.type === "email" ? (
-                        <Mail className="w-4 h-4 text-blue-500" />
+                        <Mail className="w-4 h-4 text-blue-400" />
                       ) : (
-                        <Megaphone className="w-4 h-4 text-green-500" />
+                        <Megaphone className="w-4 h-4 text-phosphor" />
                       )}
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-white">{campaign.name}</p>
-                      <p className="text-xs text-zinc-500">
+                      <p className="text-sm font-medium text-snow">{campaign.name}</p>
+                      <p className="text-xs text-smoke">
                         {campaign.platform} · {campaign.type} · {campaign.createdAt}
                       </p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="text-right hidden sm:block">
-                      <p className="text-sm text-white">{campaign.reach.toLocaleString()} reach</p>
-                      <p className="text-xs text-zinc-500">{campaign.conversions} conversions</p>
+                      <p className="text-sm text-snow">{campaign.reach.toLocaleString()} reach</p>
+                      <p className="text-xs text-smoke">{campaign.conversions} conversions</p>
                     </div>
-                    <Badge variant="outline" className={statusColors[campaign.status]}>
+                    <Badge variant="outline" className={`rounded-full ${statusColors[campaign.status]}`}>
                       {campaign.status}
                     </Badge>
                   </div>
@@ -131,16 +127,15 @@ export default function MarketingPage() {
             </div>
           </Card>
 
-          {/* Social Media Posts */}
-          <Card className="bg-zinc-900 border-zinc-800">
-            <div className="p-4 border-b border-zinc-800 flex items-center justify-between">
-              <h2 className="text-lg font-semibold text-white">Social Media Posts</h2>
-              <Button variant="outline" size="sm" className="border-zinc-700 text-zinc-300">
+          <Card className="bg-obsidian border-charcoal rounded-2xl">
+            <div className="p-4 border-b border-charcoal flex items-center justify-between">
+              <h2 className="text-lg font-medium text-snow">Social Media Posts</h2>
+              <Button variant="outline" size="sm" className="border-charcoal text-silver rounded-full">
                 <Plus className="w-4 h-4 mr-2" />
                 Generate Post
               </Button>
             </div>
-            <div className="divide-y divide-zinc-800">
+            <div className="divide-y divide-charcoal">
               {mockSocialPosts.map((post) => {
                 const Icon = platformIcons[post.platform];
                 const color = platformColors[post.platform];
@@ -150,22 +145,22 @@ export default function MarketingPage() {
                       <Icon className={`w-5 h-5 mt-0.5 ${color}`} />
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
-                          <span className="text-sm font-medium text-white capitalize">
+                          <span className="text-sm font-medium text-snow capitalize">
                             {post.platform}
                           </span>
-                          <Badge variant="outline" className={statusColors[post.status]}>
+                          <Badge variant="outline" className={`rounded-full ${statusColors[post.status]}`}>
                             {post.status}
                           </Badge>
                           {post.scheduledFor && (
-                            <span className="text-xs text-zinc-500 flex items-center gap-1">
+                            <span className="text-xs text-smoke flex items-center gap-1">
                               <Calendar className="w-3 h-3" />
                               {post.scheduledFor}
                             </span>
                           )}
                         </div>
-                        <p className="text-sm text-zinc-300 mb-2">{post.content}</p>
+                        <p className="text-sm text-silver mb-2">{post.content}</p>
                         {post.image && (
-                          <div className="w-20 h-20 rounded-lg bg-zinc-800 overflow-hidden mb-2">
+                          <div className="w-20 h-20 rounded-xl bg-ash overflow-hidden mb-2">
                             <img
                               src={post.image}
                               alt="Post"
@@ -174,7 +169,7 @@ export default function MarketingPage() {
                           </div>
                         )}
                         {post.status === "published" && (
-                          <div className="flex gap-4 text-xs text-zinc-500">
+                          <div className="flex gap-4 text-xs text-smoke">
                             <span className="flex items-center gap-1">
                               <Heart className="w-3 h-3" /> {post.likes}
                             </span>
@@ -195,26 +190,24 @@ export default function MarketingPage() {
           </Card>
         </div>
 
-        {/* Right Sidebar (1/3) */}
         <div className="space-y-6">
-          {/* Quick Actions */}
-          <Card className="bg-zinc-900 border-zinc-800">
-            <div className="p-4 border-b border-zinc-800">
-              <h2 className="text-lg font-semibold text-white">Quick Actions</h2>
+          <Card className="bg-obsidian border-charcoal rounded-2xl">
+            <div className="p-4 border-b border-charcoal">
+              <h2 className="text-lg font-medium text-snow">Quick Actions</h2>
             </div>
             <div className="p-4 space-y-2">
               {[
                 { label: "Generate Instagram Post", icon: Camera, color: "text-pink-500" },
-                { label: "Create Email Campaign", icon: Mail, color: "text-blue-500" },
-                { label: "Launch Ad Campaign", icon: Megaphone, color: "text-green-500" },
-                { label: "Send Promo Message", icon: Send, color: "text-purple-500" },
+                { label: "Create Email Campaign", icon: Mail, color: "text-blue-400" },
+                { label: "Launch Ad Campaign", icon: Megaphone, color: "text-phosphor" },
+                { label: "Send Promo Message", icon: Send, color: "text-purple-400" },
               ].map((action) => {
                 const Icon = action.icon;
                 return (
                   <Button
                     key={action.label}
                     variant="outline"
-                    className="w-full justify-start border-zinc-800 bg-zinc-800/50 hover:bg-zinc-800 text-white"
+                    className="w-full justify-start border-charcoal bg-ash/50 hover:bg-ash text-snow rounded-full"
                   >
                     <Icon className={`w-4 h-4 mr-2 ${action.color}`} />
                     {action.label}
@@ -224,10 +217,9 @@ export default function MarketingPage() {
             </div>
           </Card>
 
-          {/* AI Suggestions */}
-          <Card className="bg-zinc-900 border-zinc-800">
-            <div className="p-4 border-b border-zinc-800">
-              <h2 className="text-lg font-semibold text-white">AI Suggestions</h2>
+          <Card className="bg-obsidian border-charcoal rounded-2xl">
+            <div className="p-4 border-b border-charcoal">
+              <h2 className="text-lg font-medium text-snow">AI Suggestions</h2>
             </div>
             <div className="p-4 space-y-3">
               {[
@@ -235,12 +227,12 @@ export default function MarketingPage() {
                 "Send a flash sale email to your 3,200 subscribers",
                 "Your competitor dropped prices — consider a counter-campaign",
               ].map((suggestion, i) => (
-                <div key={i} className="p-3 bg-zinc-800/50 rounded-lg">
-                  <p className="text-xs text-zinc-300">{suggestion}</p>
+                <div key={i} className="p-3 bg-ash/50 rounded-2xl">
+                  <p className="text-xs text-silver">{suggestion}</p>
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="mt-1 h-6 text-xs text-blue-400 hover:text-blue-300 p-0"
+                    className="mt-1 h-6 text-xs text-phosphor hover:text-mint p-0"
                   >
                     Act on this →
                   </Button>

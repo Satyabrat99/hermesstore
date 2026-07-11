@@ -27,74 +27,71 @@ export default function SettingsPage() {
   return (
     <div className="p-6 space-y-6 max-w-3xl">
       <div>
-        <h1 className="text-2xl font-bold text-white">Settings</h1>
-        <p className="text-sm text-zinc-400 mt-1">
+        <h1 className="text-2xl font-medium text-snow">Settings</h1>
+        <p className="text-sm text-silver mt-1">
           Configure your store, integrations, and preferences
         </p>
       </div>
 
-      {/* Store Settings */}
-      <Card className="bg-zinc-900 border-zinc-800">
-        <div className="p-4 border-b border-zinc-800 flex items-center gap-2">
-          <Store className="w-5 h-5 text-blue-500" />
-          <h2 className="text-base font-semibold text-white">Store</h2>
+      <Card className="bg-obsidian border-charcoal rounded-2xl">
+        <div className="p-4 border-b border-charcoal flex items-center gap-2">
+          <Store className="w-5 h-5 text-phosphor" />
+          <h2 className="text-base font-medium text-snow">Store</h2>
         </div>
         <div className="p-4 space-y-4">
           <div>
-            <label className="text-sm text-zinc-400 mb-1 block">Store Name</label>
-            <Input defaultValue="HermesStore Demo" className="bg-zinc-800 border-zinc-700 text-white" />
+            <label className="text-sm text-silver mb-1 block">Store Name</label>
+            <Input defaultValue="HermesStore Demo" className="bg-ash border-slate text-snow rounded-full focus:border-phosphor" />
           </div>
           <div>
-            <label className="text-sm text-zinc-400 mb-1 block">Shopify Domain</label>
-            <Input defaultValue="hermesstore-demo.myshopify.com" className="bg-zinc-800 border-zinc-700 text-white" />
+            <label className="text-sm text-silver mb-1 block">Shopify Domain</label>
+            <Input defaultValue="hermesstore-demo.myshopify.com" className="bg-ash border-slate text-snow rounded-full focus:border-phosphor" />
           </div>
           <div>
-            <label className="text-sm text-zinc-400 mb-1 block">Currency</label>
-            <Input defaultValue="INR (₹)" className="bg-zinc-800 border-zinc-700 text-white" />
+            <label className="text-sm text-silver mb-1 block">Currency</label>
+            <Input defaultValue="INR (₹)" className="bg-ash border-slate text-snow rounded-full focus:border-phosphor" />
           </div>
         </div>
       </Card>
 
-      {/* API Connection */}
-      <Card className="bg-zinc-900 border-zinc-800">
-        <div className="p-4 border-b border-zinc-800 flex items-center gap-2">
-          <Key className="w-5 h-5 text-green-500" />
-          <h2 className="text-base font-semibold text-white">Hermes API</h2>
+      <Card className="bg-obsidian border-charcoal rounded-2xl">
+        <div className="p-4 border-b border-charcoal flex items-center gap-2">
+          <Key className="w-5 h-5 text-phosphor" />
+          <h2 className="text-base font-medium text-snow">Hermes API</h2>
         </div>
         <div className="p-4 space-y-4">
           <div>
-            <label className="text-sm text-zinc-400 mb-1 block">API Endpoint</label>
+            <label className="text-sm text-silver mb-1 block">API Endpoint</label>
             <div className="flex gap-2">
-              <Input defaultValue="http://localhost:8642" className="bg-zinc-800 border-zinc-700 text-white flex-1" readOnly />
-              <Badge variant="outline" className="border-green-500/20 text-green-500 self-center">
+              <Input defaultValue="http://localhost:8642" className="bg-ash border-slate text-snow rounded-full flex-1" readOnly />
+              <Badge variant="outline" className="border-phosphor/20 text-phosphor self-center rounded-full">
                 <Check className="w-3 h-3 mr-1" /> Connected
               </Badge>
             </div>
           </div>
           <div>
-            <label className="text-sm text-zinc-400 mb-1 block">API Key</label>
+            <label className="text-sm text-silver mb-1 block">API Key</label>
             <div className="flex gap-2">
               <Input
                 type="password"
                 defaultValue={apiKey}
-                className="bg-zinc-800 border-zinc-700 text-white flex-1"
+                className="bg-ash border-slate text-snow rounded-full flex-1"
                 readOnly
               />
-              <Button variant="outline" size="sm" onClick={handleCopy} className="border-zinc-700 text-zinc-300">
-                {copied ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
+              <Button variant="outline" size="sm" onClick={handleCopy} className="border-charcoal text-silver rounded-full">
+                {copied ? <Check className="w-4 h-4 text-phosphor" /> : <Copy className="w-4 h-4" />}
               </Button>
             </div>
           </div>
         </div>
       </Card>
 
-      {/* Integrations */}
-      <Card className="bg-zinc-900 border-zinc-800">
-        <div className="p-4 border-b border-zinc-800 flex items-center gap-2">
-          <Plug className="w-5 h-5 text-purple-500" />
-          <h2 className="text-base font-semibold text-white">Integrations</h2>
+      <Card className="bg-obsidian border-charcoal rounded-2xl">
+        <div className="p-4 border-b border-charcoal flex items-center gap-2">
+          <Plug className="w-5 h-5 text-purple-400" />
+          <h2 className="text-base font-medium text-snow">Integrations</h2>
         </div>
-        <div className="divide-y divide-zinc-800">
+        <div className="divide-y divide-charcoal">
           {[
             { name: "Shopify", status: "connected", desc: "Store operations, products, orders" },
             { name: "OpenAI", status: "connected", desc: "GPT-5.5 for agent intelligence" },
@@ -105,16 +102,16 @@ export default function SettingsPage() {
           ].map((integration) => (
             <div key={integration.name} className="p-4 flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-white">{integration.name}</p>
-                <p className="text-xs text-zinc-500">{integration.desc}</p>
+                <p className="text-sm font-medium text-snow">{integration.name}</p>
+                <p className="text-xs text-smoke">{integration.desc}</p>
               </div>
               <Badge
                 variant="outline"
-                className={
+                className={`rounded-full ${
                   integration.status === "connected"
-                    ? "border-green-500/20 text-green-500"
-                    : "border-zinc-700 text-zinc-500"
-                }
+                    ? "border-phosphor/20 text-phosphor"
+                    : "border-charcoal text-smoke"
+                }`}
               >
                 {integration.status === "connected" ? "Connected" : "Not Connected"}
               </Badge>
@@ -123,34 +120,33 @@ export default function SettingsPage() {
         </div>
       </Card>
 
-      {/* Brand Voice */}
-      <Card className="bg-zinc-900 border-zinc-800">
-        <div className="p-4 border-b border-zinc-800 flex items-center gap-2">
-          <Palette className="w-5 h-5 text-pink-500" />
-          <h2 className="text-base font-semibold text-white">Brand Voice</h2>
+      <Card className="bg-obsidian border-charcoal rounded-2xl">
+        <div className="p-4 border-b border-charcoal flex items-center gap-2">
+          <Palette className="w-5 h-5 text-pink-400" />
+          <h2 className="text-base font-medium text-snow">Brand Voice</h2>
         </div>
         <div className="p-4 space-y-4">
           <div>
-            <label className="text-sm text-zinc-400 mb-1 block">Tone</label>
-            <Input defaultValue="Friendly, professional, concise" className="bg-zinc-800 border-zinc-700 text-white" />
+            <label className="text-sm text-silver mb-1 block">Tone</label>
+            <Input defaultValue="Friendly, professional, concise" className="bg-ash border-slate text-snow rounded-full focus:border-phosphor" />
           </div>
           <div>
-            <label className="text-sm text-zinc-400 mb-1 block">Brand Colors</label>
+            <label className="text-sm text-silver mb-1 block">Brand Colors</label>
             <div className="flex gap-2">
-              {["#3B82F6", "#10B981", "#F59E0B", "#EF4444"].map((color) => (
+              {["#3ecf8e", "#1f4b37", "#006239", "#121212"].map((color) => (
                 <div
                   key={color}
-                  className="w-8 h-8 rounded-lg border border-zinc-700"
+                  className="w-8 h-8 rounded-full border border-charcoal"
                   style={{ backgroundColor: color }}
                 />
               ))}
             </div>
           </div>
           <div>
-            <label className="text-sm text-zinc-400 mb-1 block">Description</label>
+            <label className="text-sm text-silver mb-1 block">Description</label>
             <textarea
               defaultValue="Modern Indian ecommerce brand. Premium quality at fair prices. Fast shipping, excellent support."
-              className="w-full h-20 bg-zinc-800 border-zinc-700 text-white rounded-lg px-3 py-2 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full h-20 bg-ash border border-slate text-snow rounded-2xl px-3 py-2 text-sm resize-none focus:outline-none focus:border-phosphor"
             />
           </div>
         </div>

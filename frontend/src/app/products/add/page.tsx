@@ -75,17 +75,17 @@ export default function AddProductPage() {
   if (published) {
     return (
       <div className="p-6 flex items-center justify-center min-h-[60vh]">
-        <Card className="bg-zinc-900 border-zinc-800 p-8 text-center max-w-md">
-          <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Check className="w-8 h-8 text-green-500" />
+        <Card className="bg-obsidian border-charcoal rounded-2xl p-8 text-center max-w-md">
+          <div className="w-16 h-16 bg-phosphor/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Check className="w-8 h-8 text-phosphor" />
           </div>
-          <h2 className="text-xl font-bold text-white mb-2">Product Created!</h2>
-          <p className="text-zinc-400 mb-6">
+          <h2 className="text-xl font-medium text-snow mb-2">Product Created!</h2>
+          <p className="text-silver mb-6">
             &quot;{product?.title}&quot; has been added to your store as a draft.
           </p>
           <div className="flex gap-3 justify-center">
             <Link href="/products">
-              <Button variant="outline" className="border-zinc-700 text-zinc-300">
+              <Button variant="outline" className="border-charcoal text-silver rounded-full">
                 View Products
               </Button>
             </Link>
@@ -95,7 +95,7 @@ export default function AddProductPage() {
                 setProduct(null);
                 setTextInput("");
               }}
-              className="bg-blue-600 hover:bg-blue-700 text-white"
+              className="bg-phosphor hover:bg-mint text-obsidian rounded-full font-medium"
             >
               Add Another
             </Button>
@@ -107,23 +107,21 @@ export default function AddProductPage() {
 
   return (
     <div className="p-6 space-y-6 max-w-4xl">
-      {/* Header */}
       <div className="flex items-center gap-4">
         <Link href="/products">
-          <Button variant="ghost" size="sm" className="text-zinc-400 hover:text-white">
+          <Button variant="ghost" size="sm" className="text-smoke hover:text-snow">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back
           </Button>
         </Link>
         <div>
-          <h1 className="text-2xl font-bold text-white">Add Product</h1>
-          <p className="text-sm text-zinc-400 mt-1">
+          <h1 className="text-2xl font-medium text-snow">Add Product</h1>
+          <p className="text-sm text-silver mt-1">
             Describe your product and let AI create the listing
           </p>
         </div>
       </div>
 
-      {/* Input Method Selector */}
       <div className="flex gap-3">
         {[
           { id: "text" as InputMethod, label: "Text", icon: Type, desc: "Type a description" },
@@ -136,39 +134,38 @@ export default function AddProductPage() {
             <button
               key={m.id}
               onClick={() => setMethod(m.id)}
-              className={`flex-1 p-4 rounded-lg border transition-colors ${
+              className={`flex-1 p-4 rounded-2xl border transition-colors ${
                 isActive
-                  ? "border-blue-500 bg-blue-500/10"
-                  : "border-zinc-800 bg-zinc-900 hover:border-zinc-700"
+                  ? "border-phosphor bg-phosphor/5"
+                  : "border-charcoal bg-obsidian hover:border-graphite"
               }`}
             >
-              <Icon className={`w-5 h-5 mb-2 ${isActive ? "text-blue-500" : "text-zinc-400"}`} />
-              <p className={`text-sm font-medium ${isActive ? "text-white" : "text-zinc-300"}`}>
+              <Icon className={`w-5 h-5 mb-2 ${isActive ? "text-phosphor" : "text-smoke"}`} />
+              <p className={`text-sm font-medium ${isActive ? "text-snow" : "text-silver"}`}>
                 {m.label}
               </p>
-              <p className="text-xs text-zinc-500 mt-0.5">{m.desc}</p>
+              <p className="text-xs text-smoke mt-0.5">{m.desc}</p>
             </button>
           );
         })}
       </div>
 
-      {/* Input Area */}
-      <Card className="bg-zinc-900 border-zinc-800 p-6">
+      <Card className="bg-obsidian border-charcoal rounded-2xl p-6">
         {method === "text" && (
           <div className="space-y-4">
             <div>
-              <label className="text-sm text-zinc-400 mb-2 block">Describe your product</label>
+              <label className="text-sm text-silver mb-2 block">Describe your product</label>
               <textarea
                 value={textInput}
                 onChange={(e) => setTextInput(e.target.value)}
                 placeholder="e.g. Handmade leather wallet from Jaipur, brown, premium quality, ₹1,499"
-                className="w-full h-32 bg-zinc-800 border-zinc-700 text-white rounded-lg px-4 py-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full h-32 bg-ash border border-slate text-snow rounded-2xl px-4 py-3 text-sm resize-none focus:outline-none focus:border-phosphor"
               />
             </div>
             <Button
               onClick={handleGenerate}
               disabled={!textInput.trim() || isGenerating}
-              className="bg-blue-600 hover:bg-blue-700 text-white"
+              className="bg-phosphor hover:bg-mint text-obsidian rounded-full font-medium"
             >
               {isGenerating ? (
                 <>
@@ -187,12 +184,12 @@ export default function AddProductPage() {
 
         {method === "image" && (
           <div className="space-y-4">
-            <div className="border-2 border-dashed border-zinc-700 rounded-lg p-12 text-center hover:border-zinc-600 transition-colors cursor-pointer">
-              <Upload className="w-10 h-10 text-zinc-500 mx-auto mb-3" />
-              <p className="text-sm text-zinc-300 mb-1">Drop an image here or click to upload</p>
-              <p className="text-xs text-zinc-500">PNG, JPG up to 10MB</p>
+            <div className="border-2 border-dashed border-charcoal rounded-2xl p-12 text-center hover:border-graphite transition-colors cursor-pointer">
+              <Upload className="w-10 h-10 text-smoke mx-auto mb-3" />
+              <p className="text-sm text-silver mb-1">Drop an image here or click to upload</p>
+              <p className="text-xs text-smoke">PNG, JPG up to 10MB</p>
             </div>
-            <p className="text-xs text-zinc-500 text-center">
+            <p className="text-xs text-smoke text-center">
               AI will identify the product, generate title, description, tags, and suggest pricing
             </p>
           </div>
@@ -200,82 +197,79 @@ export default function AddProductPage() {
 
         {method === "voice" && (
           <div className="space-y-4">
-            <div className="border-2 border-dashed border-zinc-700 rounded-lg p-12 text-center hover:border-zinc-600 transition-colors cursor-pointer">
-              <div className="w-16 h-16 bg-blue-600/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Mic className="w-8 h-8 text-blue-500" />
+            <div className="border-2 border-dashed border-charcoal rounded-2xl p-12 text-center hover:border-graphite transition-colors cursor-pointer">
+              <div className="w-16 h-16 bg-phosphor/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Mic className="w-8 h-8 text-phosphor" />
               </div>
-              <p className="text-sm text-zinc-300 mb-1">Click to start recording</p>
-              <p className="text-xs text-zinc-500">
+              <p className="text-sm text-silver mb-1">Click to start recording</p>
+              <p className="text-xs text-smoke">
                 Say something like: &quot;Add Nike Air Max, black, size 10, eight thousand nine hundred ninety nine rupees&quot;
               </p>
             </div>
-            <p className="text-xs text-zinc-500 text-center">
+            <p className="text-xs text-smoke text-center">
               Powered by Wispr Flow + ElevenLabs
             </p>
           </div>
         )}
       </Card>
 
-      {/* Generated Product Preview */}
       {product && (
-        <Card className="bg-zinc-900 border-zinc-800 p-6">
-          <h2 className="text-lg font-semibold text-white mb-4">Generated Listing</h2>
+        <Card className="bg-obsidian border-charcoal rounded-2xl p-6">
+          <h2 className="text-lg font-medium text-snow mb-4">Generated Listing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Left: Image placeholder */}
-            <div className="aspect-square bg-zinc-800 rounded-lg flex items-center justify-center">
+            <div className="aspect-square bg-ash rounded-2xl flex items-center justify-center">
               <div className="text-center">
-                <ImageIcon className="w-12 h-12 text-zinc-600 mx-auto mb-2" />
-                <p className="text-sm text-zinc-500">AI-generated image will appear here</p>
+                <ImageIcon className="w-12 h-12 text-graphite mx-auto mb-2" />
+                <p className="text-sm text-smoke">AI-generated image will appear here</p>
               </div>
             </div>
 
-            {/* Right: Product details */}
             <div className="space-y-4">
               <div>
-                <label className="text-xs text-zinc-500 mb-1 block">Title</label>
+                <label className="text-xs text-smoke mb-1 block">Title</label>
                 <Input
                   value={product.title}
                   onChange={(e) => setProduct({ ...product, title: e.target.value })}
-                  className="bg-zinc-800 border-zinc-700 text-white"
+                  className="bg-ash border-slate text-snow rounded-full focus:border-phosphor"
                 />
               </div>
 
               <div>
-                <label className="text-xs text-zinc-500 mb-1 block">Description</label>
+                <label className="text-xs text-smoke mb-1 block">Description</label>
                 <textarea
                   value={product.description}
                   onChange={(e) => setProduct({ ...product, description: e.target.value })}
-                  className="w-full h-24 bg-zinc-800 border-zinc-700 text-white rounded-lg px-3 py-2 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full h-24 bg-ash border border-slate text-snow rounded-2xl px-3 py-2 text-sm resize-none focus:outline-none focus:border-phosphor"
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="text-xs text-zinc-500 mb-1 block">Price (₹)</label>
+                  <label className="text-xs text-smoke mb-1 block">Price (₹)</label>
                   <Input
                     value={product.price}
                     onChange={(e) => setProduct({ ...product, price: e.target.value })}
-                    className="bg-zinc-800 border-zinc-700 text-white"
+                    className="bg-ash border-slate text-snow rounded-full focus:border-phosphor"
                   />
                 </div>
                 <div>
-                  <label className="text-xs text-zinc-500 mb-1 block">Category</label>
+                  <label className="text-xs text-smoke mb-1 block">Category</label>
                   <Input
                     value={product.category}
                     onChange={(e) => setProduct({ ...product, category: e.target.value })}
-                    className="bg-zinc-800 border-zinc-700 text-white"
+                    className="bg-ash border-slate text-snow rounded-full focus:border-phosphor"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="text-xs text-zinc-500 mb-1 block">Tags</label>
+                <label className="text-xs text-smoke mb-1 block">Tags</label>
                 <div className="flex flex-wrap gap-2 mb-2">
                   {product.tags.map((tag) => (
                     <Badge
                       key={tag}
                       variant="outline"
-                      className="border-zinc-700 text-zinc-300 pr-1"
+                      className="border-charcoal text-silver rounded-full pr-1"
                     >
                       {tag}
                       <button
@@ -293,13 +287,13 @@ export default function AddProductPage() {
                     onChange={(e) => setTagInput(e.target.value)}
                     onKeyDown={(e) => e.key === "Enter" && handleAddTag()}
                     placeholder="Add a tag..."
-                    className="bg-zinc-800 border-zinc-700 text-white"
+                    className="bg-ash border-slate text-snow rounded-full focus:border-phosphor"
                   />
                   <Button
                     variant="outline"
                     size="sm"
                     onClick={handleAddTag}
-                    className="border-zinc-700 text-zinc-300"
+                    className="border-charcoal text-silver rounded-full"
                   >
                     <Plus className="w-4 h-4" />
                   </Button>
@@ -309,7 +303,7 @@ export default function AddProductPage() {
               <div className="flex gap-3 pt-2">
                 <Button
                   variant="outline"
-                  className="flex-1 border-zinc-700 text-zinc-300"
+                  className="flex-1 border-charcoal text-silver rounded-full"
                   onClick={() => setProduct(null)}
                 >
                   Discard
@@ -317,7 +311,7 @@ export default function AddProductPage() {
                 <Button
                   onClick={handlePublish}
                   disabled={isPublishing}
-                  className="flex-1 bg-blue-600 hover:bg-blue-700 text-white"
+                  className="flex-1 bg-phosphor hover:bg-mint text-obsidian rounded-full font-medium"
                 >
                   {isPublishing ? (
                     <>
