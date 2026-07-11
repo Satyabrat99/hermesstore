@@ -1,5 +1,5 @@
 # HermesStore — Project-local Hermes config
-# Separate from user's global hermes
+# All 4 agents configured with skills
 
 model:
   provider: xiaomi
@@ -8,6 +8,32 @@ model:
 terminal:
   cwd: C:\Users\satya\HermesStore
 
+api_server:
+  enabled: true
+  key: hermesstore-app-2026-secret-key-32c
+  port: 8642
+  host: 127.0.0.1
+
+# Enable built-in tools
+tools:
+  - terminal
+  - read_file
+  - write_file
+  - search_files
+  - web_search
+  - web_extract
+  - browser_navigate
+  - browser_click
+  - browser_type
+  - browser_snapshot
+  - browser_vision
+  - patch
+  - image_generate
+
+# Skills directory
+skills_dir: C:\Users\satya\HermesStore\.hermes\skills
+
+# MCP Servers (Shopify when credentials available)
 mcp_servers: {}
 # shopify:
 #   command: "npx"

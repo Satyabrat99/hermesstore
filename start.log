@@ -2,11 +2,16 @@ npm warn invalid config omit="" set in C:\Users\satya\HermesStore\frontend\.npmr
 npm warn invalid config Must be one or more of: dev, optional, peer
 
 > frontend@0.1.0 start
-> next start
+> node ../scripts/start-hermes.js & next start
 
-   ▲ Next.js 15.5.20
-   - Local:        http://localhost:3000
-   - Network:      http://192.168.1.3:3000
-
- ✓ Starting...
- ✓ Ready in 2.7s
+🤖 Starting HermesStore agent (project-local)...
+   Binary: C:\Users\satya\HermesStore\hermes-agent\.venv\Scripts\hermes.exe
+   Home:   C:\Users\satya\HermesStore\.hermes
+   Port:   8642
+✅ HermesStore agent ready on port 8642
+Hermes is running. Press Ctrl+C to stop.
+  [hermes] ✗ Another gateway instance is already running (PID 43924).
+  Use 'hermes gateway restart' to replace it,
+  or 'hermes gateway stop' first.
+  Or use 'hermes gateway run --replace' to auto-replace.
+  [hermes] Exited with code 1

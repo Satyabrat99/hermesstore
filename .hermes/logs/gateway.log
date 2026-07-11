@@ -12,3 +12,89 @@
 2026-07-11 23:44:32,213 INFO gateway.run: Gateway housekeeping started (interval=60s)
 2026-07-11 23:44:32,238 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes\kanban\.dispatcher.lock)
 2026-07-11 23:44:37,228 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-07-11 23:58:11,928 INFO gateway.run: Starting Hermes Gateway...
+2026-07-11 23:58:11,933 INFO gateway.run: Session storage: C:\Users\satya\HermesStore\.hermes\sessions
+2026-07-11 23:58:11,941 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-07-11 23:58:11,946 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-07-11 23:58:11,974 WARNING gateway.run: No env user allowlists configured. Messaging platforms default to pairing/allowlist policies and will deny unknown senders unless you configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id) or explicitly opt in with GATEWAY_ALLOW_ALL_USERS=true plus dm_policy/group_policy: open on the platform.
+2026-07-11 23:58:12,280 INFO gateway.run: Connecting to api_server...
+2026-07-11 23:58:13,367 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8642 (model: hermes-agent)
+2026-07-11 23:58:13,432 INFO gateway.run: ✓ api_server connected
+2026-07-11 23:58:13,467 INFO gateway.run: Gateway running with 1 platform(s)
+2026-07-11 23:58:13,500 INFO gateway.run: Channel directory built: 0 target(s)
+2026-07-11 23:58:14,533 INFO gateway.run: Press Ctrl+C to stop
+2026-07-11 23:58:14,570 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-07-11 23:58:14,608 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes\kanban\.dispatcher.lock)
+2026-07-11 23:58:19,606 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-07-12 00:05:52,962 INFO gateway.run: Starting Hermes Gateway...
+2026-07-12 00:05:52,968 INFO gateway.run: Session storage: C:\Users\satya\HermesStore\.hermes\sessions
+2026-07-12 00:05:52,975 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-07-12 00:05:52,978 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-07-12 00:05:53,015 WARNING gateway.run: No env user allowlists configured. Messaging platforms default to pairing/allowlist policies and will deny unknown senders unless you configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id) or explicitly opt in with GATEWAY_ALLOW_ALL_USERS=true plus dm_policy/group_policy: open on the platform.
+2026-07-12 00:05:53,259 INFO gateway.run: Connecting to api_server...
+2026-07-12 00:05:54,357 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8642 (model: hermes-agent)
+2026-07-12 00:05:54,416 INFO gateway.run: ✓ api_server connected
+2026-07-12 00:05:54,448 INFO gateway.run: Gateway running with 1 platform(s)
+2026-07-12 00:05:54,473 INFO gateway.run: Channel directory built: 0 target(s)
+2026-07-12 00:05:55,493 INFO gateway.run: Press Ctrl+C to stop
+2026-07-12 00:05:55,527 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-07-12 00:05:55,601 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes\kanban\.dispatcher.lock)
+2026-07-12 00:06:00,604 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-07-12 00:13:29,909 INFO gateway.run: Starting Hermes Gateway...
+2026-07-12 00:13:29,914 INFO gateway.run: Session storage: C:\Users\satya\HermesStore\.hermes\sessions
+2026-07-12 00:13:29,919 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-07-12 00:13:29,922 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-07-12 00:13:29,942 WARNING gateway.run: No env user allowlists configured. Messaging platforms default to pairing/allowlist policies and will deny unknown senders unless you configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id) or explicitly opt in with GATEWAY_ALLOW_ALL_USERS=true plus dm_policy/group_policy: open on the platform.
+2026-07-12 00:13:30,105 INFO gateway.run: Connecting to api_server...
+2026-07-12 00:13:31,171 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8642 (model: hermes-agent)
+2026-07-12 00:13:31,211 INFO gateway.run: ✓ api_server connected
+2026-07-12 00:13:31,238 INFO gateway.run: Gateway running with 1 platform(s)
+2026-07-12 00:13:31,253 INFO gateway.run: Channel directory built: 0 target(s)
+2026-07-12 00:13:32,270 INFO gateway.run: Press Ctrl+C to stop
+2026-07-12 00:13:32,289 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-07-12 00:13:32,315 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes\kanban\.dispatcher.lock)
+2026-07-12 00:13:37,304 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-07-12 00:14:37,071 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/v1/models' user_agent='curl/8.19.0'
+2026-07-12 00:17:29,449 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/v1/models' user_agent='curl/8.19.0'
+2026-07-12 00:22:59,385 INFO gateway.run: Starting Hermes Gateway...
+2026-07-12 00:22:59,388 INFO gateway.run: Session storage: C:\Users\satya\HermesStore\.hermes\sessions
+2026-07-12 00:22:59,394 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-07-12 00:22:59,397 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-07-12 00:22:59,414 WARNING gateway.run: No env user allowlists configured. Messaging platforms default to pairing/allowlist policies and will deny unknown senders unless you configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id) or explicitly opt in with GATEWAY_ALLOW_ALL_USERS=true plus dm_policy/group_policy: open on the platform.
+2026-07-12 00:22:59,549 INFO gateway.run: Connecting to api_server...
+2026-07-12 00:23:00,611 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8642 (model: hermes-agent)
+2026-07-12 00:23:00,646 INFO gateway.run: ✓ api_server connected
+2026-07-12 00:23:00,674 INFO gateway.run: Gateway running with 1 platform(s)
+2026-07-12 00:23:00,688 INFO gateway.run: Channel directory built: 0 target(s)
+2026-07-12 00:23:01,706 INFO gateway.run: Press Ctrl+C to stop
+2026-07-12 00:23:01,725 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-07-12 00:23:01,751 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes\kanban\.dispatcher.lock)
+2026-07-12 00:23:06,762 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-07-12 00:49:19,692 INFO gateway.run: Starting Hermes Gateway...
+2026-07-12 00:49:19,692 INFO gateway.run: Session storage: C:\Users\satya\HermesStore\.hermes\sessions
+2026-07-12 00:49:19,724 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-07-12 00:49:19,725 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-07-12 00:49:19,773 WARNING gateway.run: No env user allowlists configured. Messaging platforms default to pairing/allowlist policies and will deny unknown senders unless you configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id) or explicitly opt in with GATEWAY_ALLOW_ALL_USERS=true plus dm_policy/group_policy: open on the platform.
+2026-07-12 00:49:20,233 INFO gateway.run: Connecting to api_server...
+2026-07-12 00:49:21,320 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8642 (model: hermes-agent)
+2026-07-12 00:49:21,366 INFO gateway.run: ✓ api_server connected
+2026-07-12 00:49:21,386 INFO gateway.run: Gateway running with 1 platform(s)
+2026-07-12 00:49:21,437 INFO gateway.run: Channel directory built: 0 target(s)
+2026-07-12 00:49:22,492 INFO gateway.run: Press Ctrl+C to stop
+2026-07-12 00:49:22,586 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-07-12 00:49:22,586 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes\kanban\.dispatcher.lock)
+2026-07-12 00:49:27,592 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-07-12 01:24:56,759 INFO gateway.run: Starting Hermes Gateway...
+2026-07-12 01:24:56,759 INFO gateway.run: Session storage: C:\Users\satya\HermesStore\.hermes\sessions
+2026-07-12 01:24:56,762 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-07-12 01:24:56,763 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-07-12 01:24:56,781 WARNING gateway.run: No env user allowlists configured. Messaging platforms default to pairing/allowlist policies and will deny unknown senders unless you configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id) or explicitly opt in with GATEWAY_ALLOW_ALL_USERS=true plus dm_policy/group_policy: open on the platform.
+2026-07-12 01:24:56,893 INFO gateway.run: Connecting to api_server...
+2026-07-12 01:24:57,952 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8642 (model: hermes-agent)
+2026-07-12 01:24:57,982 INFO gateway.run: ✓ api_server connected
+2026-07-12 01:24:58,004 INFO gateway.run: Gateway running with 1 platform(s)
+2026-07-12 01:24:58,012 INFO gateway.run: Channel directory built: 0 target(s)
+2026-07-12 01:24:59,020 INFO gateway.run: Press Ctrl+C to stop
+2026-07-12 01:24:59,046 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-07-12 01:24:59,073 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes\kanban\.dispatcher.lock)
+2026-07-12 01:25:04,067 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)

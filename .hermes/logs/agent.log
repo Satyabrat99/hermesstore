@@ -29,3 +29,329 @@
 2026-07-11 23:45:09,190 INFO [api-92aff712ee69ec12] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=mimo-v2.5-pro api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=25 session=api-92aff712ee69ec12
 2026-07-11 23:45:09,202 INFO aiohttp.access: 127.0.0.1 [11/Jul/2026:23:44:51 +0530] "POST /v1/chat/completions HTTP/1.1" 200 838 "-" "curl/8.19.0"
 2026-07-11 23:45:17,010 INFO aiohttp.access: 127.0.0.1 [11/Jul/2026:23:45:17 +0530] "GET /v1/models HTTP/1.1" 200 655 "-" "curl/8.19.0"
+2026-07-11 23:58:11,928 INFO gateway.run: Starting Hermes Gateway...
+2026-07-11 23:58:11,933 INFO gateway.run: Session storage: C:\Users\satya\HermesStore\.hermes\sessions
+2026-07-11 23:58:11,941 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-07-11 23:58:11,946 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-07-11 23:58:11,974 WARNING gateway.run: No env user allowlists configured. Messaging platforms default to pairing/allowlist policies and will deny unknown senders unless you configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id) or explicitly opt in with GATEWAY_ALLOW_ALL_USERS=true plus dm_policy/group_policy: open on the platform.
+2026-07-11 23:58:12,280 INFO gateway.run: Connecting to api_server...
+2026-07-11 23:58:13,367 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8642 (model: hermes-agent)
+2026-07-11 23:58:13,432 INFO gateway.run: ✓ api_server connected
+2026-07-11 23:58:13,467 INFO gateway.run: Gateway running with 1 platform(s)
+2026-07-11 23:58:13,500 INFO gateway.run: Channel directory built: 0 target(s)
+2026-07-11 23:58:14,533 INFO gateway.run: Press Ctrl+C to stop
+2026-07-11 23:58:14,559 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-07-11 23:58:14,570 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-07-11 23:58:14,608 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes\kanban\.dispatcher.lock)
+2026-07-11 23:58:19,606 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-07-12 00:05:52,962 INFO gateway.run: Starting Hermes Gateway...
+2026-07-12 00:05:52,968 INFO gateway.run: Session storage: C:\Users\satya\HermesStore\.hermes\sessions
+2026-07-12 00:05:52,975 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-07-12 00:05:52,978 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-07-12 00:05:53,015 WARNING gateway.run: No env user allowlists configured. Messaging platforms default to pairing/allowlist policies and will deny unknown senders unless you configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id) or explicitly opt in with GATEWAY_ALLOW_ALL_USERS=true plus dm_policy/group_policy: open on the platform.
+2026-07-12 00:05:53,259 INFO gateway.run: Connecting to api_server...
+2026-07-12 00:05:54,357 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8642 (model: hermes-agent)
+2026-07-12 00:05:54,416 INFO gateway.run: ✓ api_server connected
+2026-07-12 00:05:54,448 INFO gateway.run: Gateway running with 1 platform(s)
+2026-07-12 00:05:54,473 INFO gateway.run: Channel directory built: 0 target(s)
+2026-07-12 00:05:55,493 INFO gateway.run: Press Ctrl+C to stop
+2026-07-12 00:05:55,516 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-07-12 00:05:55,527 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-07-12 00:05:55,601 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes\kanban\.dispatcher.lock)
+2026-07-12 00:06:00,604 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-07-12 00:13:29,909 INFO gateway.run: Starting Hermes Gateway...
+2026-07-12 00:13:29,914 INFO gateway.run: Session storage: C:\Users\satya\HermesStore\.hermes\sessions
+2026-07-12 00:13:29,919 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-07-12 00:13:29,922 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-07-12 00:13:29,942 WARNING gateway.run: No env user allowlists configured. Messaging platforms default to pairing/allowlist policies and will deny unknown senders unless you configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id) or explicitly opt in with GATEWAY_ALLOW_ALL_USERS=true plus dm_policy/group_policy: open on the platform.
+2026-07-12 00:13:30,105 INFO gateway.run: Connecting to api_server...
+2026-07-12 00:13:31,171 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8642 (model: hermes-agent)
+2026-07-12 00:13:31,211 INFO gateway.run: ✓ api_server connected
+2026-07-12 00:13:31,238 INFO gateway.run: Gateway running with 1 platform(s)
+2026-07-12 00:13:31,253 INFO gateway.run: Channel directory built: 0 target(s)
+2026-07-12 00:13:32,270 INFO gateway.run: Press Ctrl+C to stop
+2026-07-12 00:13:32,284 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-07-12 00:13:32,289 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-07-12 00:13:32,315 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes\kanban\.dispatcher.lock)
+2026-07-12 00:13:37,304 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-07-12 00:14:13,722 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:00:14:13 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.19.0"
+2026-07-12 00:14:36,978 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:00:14:36 +0530] "GET /v1/models HTTP/1.1" 200 636 "-" "curl/8.19.0"
+2026-07-12 00:14:37,071 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/v1/models' user_agent='curl/8.19.0'
+2026-07-12 00:14:37,077 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:00:14:37 +0530] "GET /v1/models HTTP/1.1" 401 573 "-" "curl/8.19.0"
+2026-07-12 00:15:05,964 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:00:15:05 +0530] "GET /v1/models HTTP/1.1" 200 655 "-" "curl/8.19.0"
+2026-07-12 00:15:33,568 INFO run_agent: Loaded environment variables from C:\Users\satya\HermesStore\.hermes\.env
+2026-07-12 00:15:39,342 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=asyncio_0:34112 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 00:15:39,645 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-07-12 00:15:39,727 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-07-12 00:15:40,666 INFO agent.auxiliary_client: Vision auto-detect: using main provider xiaomi (mimo-v2.5)
+2026-07-12 00:15:41,407 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-07-12 00:15:41,992 INFO agent.auxiliary_client: Vision auto-detect: using main provider xiaomi (mimo-v2.5)
+2026-07-12 00:15:42,046 WARNING tools.registry: check_fn check_web_api_key returned False; dependent tools will be unavailable this turn
+2026-07-12 00:15:43,575 INFO [api-26bebdb960d1a4ad] agent.turn_context: conversation turn: session=api-26bebdb960d1a4ad model=mimo-v2.5-pro provider=xiaomi platform=api_server history=0 msg='What is 2+2? Answer in one word.'
+2026-07-12 00:15:47,495 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-13 (_call):38116 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 00:15:52,271 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-13 (_call):38116 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 00:15:52,273 INFO [api-26bebdb960d1a4ad] agent.conversation_loop: API call #1: model=mimo-v2.5-pro provider=xiaomi in=15085 out=13 total=15098 latency=5.4s cache=3072/15085 (20%)
+2026-07-12 00:15:53,615 INFO [api-26bebdb960d1a4ad] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=mimo-v2.5-pro api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=5 session=api-26bebdb960d1a4ad
+2026-07-12 00:15:53,628 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:00:15:33 +0530] "POST /v1/chat/completions HTTP/1.1" 200 838 "-" "curl/8.19.0"
+2026-07-12 00:17:19,561 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:00:17:19 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.19.0"
+2026-07-12 00:17:22,270 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=asyncio_2:2796 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 00:17:23,986 INFO [api-caa792d16498f3b7] agent.turn_context: conversation turn: session=api-caa792d16498f3b7 model=mimo-v2.5-pro provider=xiaomi platform=api_server history=0 msg='Reply with only the word PASS'
+2026-07-12 00:17:24,828 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-14 (_call):44124 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 00:17:29,228 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-14 (_call):44124 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 00:17:29,231 INFO [api-caa792d16498f3b7] agent.conversation_loop: API call #1: model=mimo-v2.5-pro provider=xiaomi in=15079 out=16 total=15095 latency=5.1s cache=15040/15079 (100%)
+2026-07-12 00:17:29,264 INFO [api-caa792d16498f3b7] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=mimo-v2.5-pro api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=4 session=api-caa792d16498f3b7
+2026-07-12 00:17:29,285 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:00:17:19 +0530] "POST /v1/chat/completions HTTP/1.1" 200 818 "-" "curl/8.19.0"
+2026-07-12 00:17:29,449 WARNING gateway.platforms.api_server: API server rejected invalid API key: remote='127.0.0.1' peer_ip='127.0.0.1' method='GET' path='/v1/models' user_agent='curl/8.19.0'
+2026-07-12 00:17:29,457 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:00:17:29 +0530] "GET /v1/models HTTP/1.1" 401 573 "-" "curl/8.19.0"
+2026-07-12 00:18:18,089 INFO [api-caa792d16498f3b7] run_agent: OpenAI client created (agent_init, shared=True) thread=asyncio_2:2796 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 00:18:19,097 INFO [api-63cc1ab78057f124] agent.turn_context: conversation turn: session=api-63cc1ab78057f124 model=mimo-v2.5-pro provider=xiaomi platform=api_server history=0 msg='Say OK'
+2026-07-12 00:18:19,767 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-15 (_call):43608 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 00:18:22,374 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-15 (_call):43608 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 00:18:22,376 INFO [api-63cc1ab78057f124] agent.conversation_loop: API call #1: model=mimo-v2.5-pro provider=xiaomi in=15075 out=12 total=15087 latency=3.2s cache=15040/15075 (100%)
+2026-07-12 00:18:22,395 INFO [api-63cc1ab78057f124] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=mimo-v2.5-pro api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=2 session=api-63cc1ab78057f124
+2026-07-12 00:18:22,407 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:00:18:16 +0530] "POST /v1/chat/completions HTTP/1.1" 200 816 "-" "curl/8.19.0"
+2026-07-12 00:18:56,130 INFO [api-63cc1ab78057f124] run_agent: OpenAI client created (agent_init, shared=True) thread=asyncio_2:2796 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 00:18:57,151 INFO [api-63cc1ab78057f124] agent.turn_context: conversation turn: session=api-63cc1ab78057f124 model=mimo-v2.5-pro provider=xiaomi platform=api_server history=0 msg='Say OK'
+2026-07-12 00:18:57,776 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-16 (_call):13040 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 00:19:00,751 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-16 (_call):13040 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 00:19:00,753 INFO [api-63cc1ab78057f124] agent.conversation_loop: API call #1: model=mimo-v2.5-pro provider=xiaomi in=15075 out=12 total=15087 latency=3.5s cache=15040/15075 (100%)
+2026-07-12 00:19:00,777 INFO [api-63cc1ab78057f124] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=mimo-v2.5-pro api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=2 session=api-63cc1ab78057f124
+2026-07-12 00:19:00,790 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:00:18:54 +0530] "POST /v1/chat/completions HTTP/1.1" 200 816 "-" "curl/8.19.0"
+2026-07-12 00:22:59,385 INFO gateway.run: Starting Hermes Gateway...
+2026-07-12 00:22:59,388 INFO gateway.run: Session storage: C:\Users\satya\HermesStore\.hermes\sessions
+2026-07-12 00:22:59,394 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-07-12 00:22:59,397 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-07-12 00:22:59,414 WARNING gateway.run: No env user allowlists configured. Messaging platforms default to pairing/allowlist policies and will deny unknown senders unless you configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id) or explicitly opt in with GATEWAY_ALLOW_ALL_USERS=true plus dm_policy/group_policy: open on the platform.
+2026-07-12 00:22:59,549 INFO gateway.run: Connecting to api_server...
+2026-07-12 00:23:00,611 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8642 (model: hermes-agent)
+2026-07-12 00:23:00,646 INFO gateway.run: ✓ api_server connected
+2026-07-12 00:23:00,674 INFO gateway.run: Gateway running with 1 platform(s)
+2026-07-12 00:23:00,688 INFO gateway.run: Channel directory built: 0 target(s)
+2026-07-12 00:23:01,235 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:00:23:01 +0530] "GET /health HTTP/1.1" 200 526 "-" "-"
+2026-07-12 00:23:01,706 INFO gateway.run: Press Ctrl+C to stop
+2026-07-12 00:23:01,720 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-07-12 00:23:01,725 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-07-12 00:23:01,751 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes\kanban\.dispatcher.lock)
+2026-07-12 00:23:06,762 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-07-12 00:23:50,589 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:00:23:50 +0530] "GET /health HTTP/1.1" 200 526 "-" "curl/8.19.0"
+2026-07-12 00:23:50,792 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:00:23:50 +0530] "GET /health HTTP/1.1" 200 545 "-" "curl/8.19.0"
+2026-07-12 00:26:15,739 INFO run_agent: Loaded environment variables from C:\Users\satya\HermesStore\.hermes\.env
+2026-07-12 00:26:23,056 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=asyncio_1:28536 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 00:26:23,377 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-07-12 00:26:23,471 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-07-12 00:26:24,608 INFO agent.auxiliary_client: Vision auto-detect: using main provider xiaomi (mimo-v2.5)
+2026-07-12 00:26:25,825 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-07-12 00:26:26,931 INFO agent.auxiliary_client: Vision auto-detect: using main provider xiaomi (mimo-v2.5)
+2026-07-12 00:26:26,997 WARNING tools.registry: check_fn check_web_api_key returned False; dependent tools will be unavailable this turn
+2026-07-12 00:26:28,762 INFO [api-63cc1ab78057f124] agent.turn_context: conversation turn: session=api-63cc1ab78057f124 model=mimo-v2.5-pro provider=xiaomi platform=api_server history=0 msg='Say OK'
+2026-07-12 00:26:34,959 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-13 (_call):34704 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 00:26:40,571 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-13 (_call):34704 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 00:26:40,573 INFO [api-63cc1ab78057f124] agent.conversation_loop: API call #1: model=mimo-v2.5-pro provider=xiaomi in=15115 out=12 total=15127 latency=6.5s cache=3072/15115 (20%)
+2026-07-12 00:26:41,615 INFO [api-63cc1ab78057f124] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=mimo-v2.5-pro api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=2 session=api-63cc1ab78057f124
+2026-07-12 00:26:41,627 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:00:26:15 +0530] "POST /v1/chat/completions HTTP/1.1" 200 835 "-" "curl/8.19.0"
+2026-07-12 00:49:07,608 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-07-12 00:49:07,681 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-07-12 00:49:07,753 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-07-12 00:49:08,706 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-07-12 00:49:08,766 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-07-12 00:49:08,802 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-07-12 00:49:08,848 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-07-12 00:49:08,887 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-07-12 00:49:08,888 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-07-12 00:49:08,971 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-07-12 00:49:09,195 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-07-12 00:49:09,249 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-07-12 00:49:09,428 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-07-12 00:49:09,496 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-07-12 00:49:09,559 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-07-12 00:49:09,714 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-07-12 00:49:09,781 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-07-12 00:49:09,846 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-07-12 00:49:09,913 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-07-12 00:49:09,986 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-07-12 00:49:10,023 INFO hermes_cli.plugins: Plugin discovery complete: 51 found, 44 enabled
+2026-07-12 00:49:19,692 INFO gateway.run: Starting Hermes Gateway...
+2026-07-12 00:49:19,692 INFO gateway.run: Session storage: C:\Users\satya\HermesStore\.hermes\sessions
+2026-07-12 00:49:19,724 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-07-12 00:49:19,725 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-07-12 00:49:19,773 WARNING gateway.run: No env user allowlists configured. Messaging platforms default to pairing/allowlist policies and will deny unknown senders unless you configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id) or explicitly opt in with GATEWAY_ALLOW_ALL_USERS=true plus dm_policy/group_policy: open on the platform.
+2026-07-12 00:49:20,233 INFO gateway.run: Connecting to api_server...
+2026-07-12 00:49:21,320 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8642 (model: hermes-agent)
+2026-07-12 00:49:21,366 INFO gateway.run: ✓ api_server connected
+2026-07-12 00:49:21,386 INFO gateway.run: Gateway running with 1 platform(s)
+2026-07-12 00:49:21,437 INFO gateway.run: Channel directory built: 0 target(s)
+2026-07-12 00:49:22,492 INFO gateway.run: Press Ctrl+C to stop
+2026-07-12 00:49:22,542 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-07-12 00:49:22,586 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-07-12 00:49:22,586 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes\kanban\.dispatcher.lock)
+2026-07-12 00:49:27,592 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-07-12 00:57:12,082 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:00:57:12 +0530] "GET /health HTTP/1.1" 200 526 "-" "-"
+2026-07-12 00:59:16,233 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:00:59:16 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 00:59:19,335 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:00:59:19 +0530] "POST /v1/chat/completions HTTP/1.1" 403 137 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 00:59:46,309 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:00:59:46 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:00:00,388 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:00:00 +0530] "POST /v1/chat/completions HTTP/1.1" 403 137 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:00:16,111 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:00:16 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:00:46,108 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:00:46 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:00:52,642 INFO run_agent: Loaded environment variables from C:\Users\satya\HermesStore\.hermes\.env
+2026-07-12 01:01:01,176 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=asyncio_1:12352 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:01:01,410 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-07-12 01:01:01,476 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-07-12 01:01:03,727 INFO agent.auxiliary_client: Vision auto-detect: using main provider xiaomi (mimo-v2.5)
+2026-07-12 01:01:03,727 WARNING tools.registry: check_fn check_close_terminal_requirements returned False; dependent tools will be unavailable this turn
+2026-07-12 01:01:04,060 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-07-12 01:01:04,060 WARNING tools.registry: check_fn check_read_terminal_requirements returned False; dependent tools will be unavailable this turn
+2026-07-12 01:01:04,693 INFO agent.auxiliary_client: Vision auto-detect: using main provider xiaomi (mimo-v2.5)
+2026-07-12 01:01:05,810 INFO [api-a1ad92f331dce2e0] agent.turn_context: conversation turn: session=api-a1ad92f331dce2e0 model=mimo-v2.5-pro provider=xiaomi platform=api_server history=0 msg='hello'
+2026-07-12 01:01:11,478 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-17 (_call):44452 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:01:14,761 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-17 (_call):44452 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:01:14,761 INFO [api-a1ad92f331dce2e0] agent.conversation_loop: API call #1: model=mimo-v2.5-pro provider=xiaomi in=17267 out=25 total=17292 latency=4.1s cache=2048/17267 (12%)
+2026-07-12 01:01:15,811 INFO [api-a1ad92f331dce2e0] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=mimo-v2.5-pro api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=32 session=api-a1ad92f331dce2e0
+2026-07-12 01:01:15,828 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:00:52 +0530] "POST /v1/chat/completions HTTP/1.1" 200 0 "-" "curl/8.18.0"
+2026-07-12 01:01:16,111 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:01:16 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:01:17,313 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:01:17 +0530] "GET /v1/models HTTP/1.1" 200 636 "-" "curl/8.18.0"
+2026-07-12 01:01:27,762 INFO [api-a1ad92f331dce2e0] run_agent: OpenAI client created (agent_init, shared=True) thread=asyncio_1:12352 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:01:27,779 INFO [api-b7cca8140ec5ba2e] agent.turn_context: conversation turn: session=api-b7cca8140ec5ba2e model=mimo-v2.5-pro provider=xiaomi platform=api_server history=0 msg='say hi'
+2026-07-12 01:01:28,462 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-19 (_call):31640 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:01:33,278 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-19 (_call):31640 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:01:33,279 INFO [api-b7cca8140ec5ba2e] agent.conversation_loop: API call #1: model=mimo-v2.5-pro provider=xiaomi in=17268 out=37 total=17305 latency=5.4s cache=17216/17268 (100%)
+2026-07-12 01:01:33,301 INFO [api-b7cca8140ec5ba2e] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=mimo-v2.5-pro api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=35 session=api-b7cca8140ec5ba2e
+2026-07-12 01:01:33,317 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:01:25 +0530] "POST /v1/chat/completions HTTP/1.1" 200 849 "-" "curl/8.18.0"
+2026-07-12 01:01:41,275 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:01:41 +0530] "POST /v1/chat/completions HTTP/1.1" 403 137 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:01:44,929 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=asyncio_0:42260 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:01:44,957 INFO [api-b7cca8140ec5ba2e] agent.turn_context: conversation turn: session=api-b7cca8140ec5ba2e model=mimo-v2.5-pro provider=xiaomi platform=api_server history=0 msg='say hi'
+2026-07-12 01:01:45,934 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-20 (_call):27320 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:01:46,111 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:01:46 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/agents" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:01:48,455 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-20 (_call):27320 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:01:48,456 INFO [api-b7cca8140ec5ba2e] agent.conversation_loop: API call #1: model=mimo-v2.5-pro provider=xiaomi in=17268 out=19 total=17287 latency=3.3s cache=17216/17268 (100%)
+2026-07-12 01:01:48,475 INFO [api-b7cca8140ec5ba2e] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=mimo-v2.5-pro api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=41 session=api-b7cca8140ec5ba2e
+2026-07-12 01:01:48,492 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:01:42 +0530] "POST /v1/chat/completions HTTP/1.1" 200 3272 "-" "curl/8.18.0"
+2026-07-12 01:01:58,684 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=asyncio_2:44996 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:01:58,709 INFO [api-b7cca8140ec5ba2e] agent.turn_context: conversation turn: session=api-b7cca8140ec5ba2e model=mimo-v2.5-pro provider=xiaomi platform=api_server history=0 msg='say hi'
+2026-07-12 01:01:59,513 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-22 (_call):44232 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:02:02,233 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-22 (_call):44232 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:02:02,233 INFO [api-b7cca8140ec5ba2e] agent.conversation_loop: API call #1: model=mimo-v2.5-pro provider=xiaomi in=17268 out=16 total=17284 latency=3.4s cache=17216/17268 (100%)
+2026-07-12 01:02:02,248 INFO [api-b7cca8140ec5ba2e] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=mimo-v2.5-pro api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=35 session=api-b7cca8140ec5ba2e
+2026-07-12 01:02:02,260 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:01:56 +0530] "POST /v1/chat/completions HTTP/1.1" 200 868 "-" "curl/8.18.0"
+2026-07-12 01:02:13,818 INFO [api-b7cca8140ec5ba2e] run_agent: OpenAI client created (agent_init, shared=True) thread=asyncio_0:42260 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:02:13,843 INFO [api-b7cca8140ec5ba2e] agent.turn_context: conversation turn: session=api-b7cca8140ec5ba2e model=mimo-v2.5-pro provider=xiaomi platform=api_server history=0 msg='say hi'
+2026-07-12 01:02:14,562 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-23 (_call):23284 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:02:16,110 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:02:16 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:02:17,796 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-23 (_call):23284 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:02:17,796 INFO [api-b7cca8140ec5ba2e] agent.conversation_loop: API call #1: model=mimo-v2.5-pro provider=xiaomi in=17268 out=21 total=17289 latency=3.8s cache=17216/17268 (100%)
+2026-07-12 01:02:17,822 INFO [api-b7cca8140ec5ba2e] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=mimo-v2.5-pro api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=29 session=api-b7cca8140ec5ba2e
+2026-07-12 01:02:17,831 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:02:11 +0530] "POST /v1/chat/completions HTTP/1.1" 200 1721 "-" "curl/8.18.0"
+2026-07-12 01:02:30,080 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:02:30 +0530] "POST /v1/chat/completions HTTP/1.1" 403 137 "http://localhost:3000/" "curl/8.18.0"
+2026-07-12 01:02:43,990 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:02:43 +0530] "POST /v1/chat/completions HTTP/1.1" 403 137 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:02:46,114 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:02:46 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:03:16,111 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:03:16 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:03:46,103 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:03:46 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:04:16,121 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:04:16 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:04:46,131 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:04:46 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:04:47,866 INFO [api-b7cca8140ec5ba2e] run_agent: OpenAI client created (agent_init, shared=True) thread=asyncio_1:12352 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:04:47,888 INFO [api-b7cca8140ec5ba2e] agent.turn_context: conversation turn: session=api-b7cca8140ec5ba2e model=mimo-v2.5-pro provider=xiaomi platform=api_server history=0 msg='say hi'
+2026-07-12 01:04:48,591 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-24 (_call):42048 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:04:53,122 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-24 (_call):42048 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:04:53,122 INFO [api-b7cca8140ec5ba2e] agent.conversation_loop: API call #1: model=mimo-v2.5-pro provider=xiaomi in=17268 out=23 total=17291 latency=5.1s cache=17216/17268 (100%)
+2026-07-12 01:04:53,147 INFO [api-b7cca8140ec5ba2e] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=mimo-v2.5-pro api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=29 session=api-b7cca8140ec5ba2e
+2026-07-12 01:04:53,160 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:04:45 +0530] "POST /v1/chat/completions HTTP/1.1" 200 2586 "http://localhost:3000/" "curl/8.18.0"
+2026-07-12 01:05:16,116 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:05:16 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:05:46,117 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:05:46 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:06:16,123 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:06:16 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:06:46,117 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:06:46 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:07:16,104 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:07:16 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:07:46,117 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:07:46 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:08:16,107 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:08:16 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:08:46,114 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:08:46 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:09:16,123 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:09:16 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:09:46,123 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:09:46 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:10:16,123 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:10:16 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:10:46,121 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:10:46 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:11:16,104 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:11:16 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:11:46,114 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:11:46 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:12:16,111 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:12:16 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:12:46,113 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:12:46 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:13:16,115 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:13:16 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:13:46,117 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:13:46 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:14:16,104 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:14:16 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:14:46,105 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:14:46 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:15:16,115 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:15:16 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:15:46,114 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:15:46 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:16:16,112 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:16:16 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:16:46,117 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:16:46 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:17:16,102 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:17:16 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:17:46,111 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:17:46 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:18:16,118 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:18:16 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:18:46,112 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:18:46 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:19:16,115 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:19:16 +0530] "GET /v1/models HTTP/1.1" 200 655 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:19:36,318 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:19:36 +0530] "POST /v1/chat/completions HTTP/1.1" 403 137 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:19:38,546 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:19:38 +0530] "GET /v1/models HTTP/1.1" 200 636 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:19:42,973 INFO [api-b7cca8140ec5ba2e] run_agent: OpenAI client created (agent_init, shared=True) thread=asyncio_2:44996 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:19:42,998 INFO [api-25f140a6575bf25c] agent.turn_context: conversation turn: session=api-25f140a6575bf25c model=mimo-v2.5-pro provider=xiaomi platform=api_server history=0 msg='hi'
+2026-07-12 01:19:43,738 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-25 (_call):32928 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:19:47,259 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-25 (_call):32928 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:19:47,260 INFO [api-25f140a6575bf25c] agent.conversation_loop: API call #1: model=mimo-v2.5-pro provider=xiaomi in=17267 out=42 total=17309 latency=4.1s cache=17216/17267 (100%)
+2026-07-12 01:19:48,093 INFO [api-25f140a6575bf25c] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=mimo-v2.5-pro api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=35 session=api-25f140a6575bf25c
+2026-07-12 01:19:48,106 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:19:41 +0530] "POST /v1/chat/completions HTTP/1.1" 200 1487 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:20:04,815 INFO [api-25f140a6575bf25c] run_agent: OpenAI client created (agent_init, shared=True) thread=asyncio_2:44996 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:20:04,837 INFO [api-25f140a6575bf25c] agent.turn_context: conversation turn: session=api-25f140a6575bf25c model=mimo-v2.5-pro provider=xiaomi platform=api_server history=2 msg='what all can you access in this app?'
+2026-07-12 01:20:05,469 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-26 (_call):4904 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:20:08,453 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:20:08 +0530] "GET /v1/models HTTP/1.1" 200 636 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:20:11,671 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-26 (_call):4904 provider=xiaomi base_url=https://api.xiaomimimo.com/v1 model=mimo-v2.5-pro
+2026-07-12 01:20:11,671 INFO [api-25f140a6575bf25c] agent.conversation_loop: API call #1: model=mimo-v2.5-pro provider=xiaomi in=17297 out=276 total=17573 latency=6.8s cache=17216/17297 (100%)
+2026-07-12 01:20:11,692 INFO [api-25f140a6575bf25c] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=mimo-v2.5-pro api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=1055 session=api-25f140a6575bf25c
+2026-07-12 01:20:11,703 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:20:03 +0530] "POST /v1/chat/completions HTTP/1.1" 200 21776 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:20:39,314 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:20:39 +0530] "GET /v1/models HTTP/1.1" 200 636 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:21:09,309 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:21:09 +0530] "GET /v1/models HTTP/1.1" 200 636 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:21:39,302 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:21:39 +0530] "GET /v1/models HTTP/1.1" 200 636 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:22:09,310 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:22:09 +0530] "GET /v1/models HTTP/1.1" 200 636 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:22:39,323 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:22:39 +0530] "GET /v1/models HTTP/1.1" 200 636 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:24:04,309 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:24:04 +0530] "GET /v1/models HTTP/1.1" 200 636 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:24:52,272 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-07-12 01:24:52,285 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-07-12 01:24:52,292 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-07-12 01:24:52,763 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-07-12 01:24:52,765 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-07-12 01:24:52,767 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-07-12 01:24:52,768 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-07-12 01:24:52,770 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-07-12 01:24:52,770 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-07-12 01:24:52,774 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-07-12 01:24:52,786 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-07-12 01:24:52,787 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-07-12 01:24:52,797 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-07-12 01:24:52,801 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-07-12 01:24:52,805 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-07-12 01:24:52,813 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-07-12 01:24:52,818 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-07-12 01:24:52,823 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-07-12 01:24:52,827 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-07-12 01:24:52,831 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-07-12 01:24:52,835 INFO hermes_cli.plugins: Plugin discovery complete: 51 found, 44 enabled
+2026-07-12 01:24:56,759 INFO gateway.run: Starting Hermes Gateway...
+2026-07-12 01:24:56,759 INFO gateway.run: Session storage: C:\Users\satya\HermesStore\.hermes\sessions
+2026-07-12 01:24:56,762 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-07-12 01:24:56,763 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-07-12 01:24:56,781 WARNING gateway.run: No env user allowlists configured. Messaging platforms default to pairing/allowlist policies and will deny unknown senders unless you configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id) or explicitly opt in with GATEWAY_ALLOW_ALL_USERS=true plus dm_policy/group_policy: open on the platform.
+2026-07-12 01:24:56,893 INFO gateway.run: Connecting to api_server...
+2026-07-12 01:24:57,952 INFO gateway.platforms.api_server: [Api_Server] API server listening on http://127.0.0.1:8642 (model: hermes-agent)
+2026-07-12 01:24:57,982 INFO gateway.run: ✓ api_server connected
+2026-07-12 01:24:58,004 INFO gateway.run: Gateway running with 1 platform(s)
+2026-07-12 01:24:58,012 INFO gateway.run: Channel directory built: 0 target(s)
+2026-07-12 01:24:59,020 INFO gateway.run: Press Ctrl+C to stop
+2026-07-12 01:24:59,036 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-07-12 01:24:59,046 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-07-12 01:24:59,073 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (C:\Users\satya\HermesStore\.hermes\kanban\.dispatcher.lock)
+2026-07-12 01:25:04,067 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-07-12 01:25:04,316 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:25:04 +0530] "GET /v1/models HTTP/1.1" 200 636 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:26:04,317 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:26:04 +0530] "GET /v1/models HTTP/1.1" 200 636 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:27:04,310 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:27:04 +0530] "GET /v1/models HTTP/1.1" 200 636 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:28:04,322 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:28:04 +0530] "GET /v1/models HTTP/1.1" 200 636 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:29:04,314 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:29:04 +0530] "GET /v1/models HTTP/1.1" 200 636 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:29:40,838 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:29:40 +0530] "GET /v1/models HTTP/1.1" 200 636 "http://localhost:3000/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:30:08,473 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:30:08 +0530] "GET /v1/models HTTP/1.1" 200 636 "http://localhost:3000/marketing" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:30:39,314 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:30:39 +0530] "GET /v1/models HTTP/1.1" 200 636 "http://localhost:3000/marketing" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:31:09,300 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:31:09 +0530] "GET /v1/models HTTP/1.1" 200 636 "http://localhost:3000/marketing" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:32:04,327 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:32:04 +0530] "GET /v1/models HTTP/1.1" 200 636 "http://localhost:3000/marketing" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:32:53,085 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:32:53 +0530] "GET /v1/models HTTP/1.1" 200 636 "http://localhost:3000/marketing" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:33:08,467 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:33:08 +0530] "GET /v1/models HTTP/1.1" 200 636 "http://localhost:3000/agents" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+2026-07-12 01:33:39,301 INFO aiohttp.access: 127.0.0.1 [12/Jul/2026:01:33:39 +0530] "GET /v1/models HTTP/1.1" 200 636 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"

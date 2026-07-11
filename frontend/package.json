@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "dev:full": "node ../scripts/start-hermes.js & next dev",
+    "dev:all": "powershell -ExecutionPolicy Bypass -File ../scripts/start-app.ps1",
     "build": "next build",
-    "start": "node ../scripts/start-hermes.js & next start",
-    "start:hermes": "node ../scripts/start-hermes.js",
-    "start:clean": "node ../scripts/start-hermes.js & next start"
+    "start": "next start",
+    "start:all": "powershell -ExecutionPolicy Bypass -File ../scripts/start-app.ps1",
+    "start:agents": "powershell -ExecutionPolicy Bypass -File ../scripts/start-all.ps1",
+    "test:agents": "powershell -ExecutionPolicy Bypass -File ../scripts/test-all.ps1"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",

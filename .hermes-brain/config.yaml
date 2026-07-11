@@ -1,0 +1,24 @@
+# HermesStore — Brain (Orchestrator) Profile
+
+model:
+  provider: xiaomi
+  model: mimo-v2.5-pro
+
+terminal:
+  cwd: C:\Users\satya\HermesStore
+
+api_server:
+  enabled: true
+  key: hermesstore-brain-2026-secret-key-32c
+  port: 8642
+  host: 127.0.0.1
+
+tools:
+  - terminal
+  - read_file
+  - write_file
+  - search_files
+  - web_search
+  - web_extract
+
+mcp_servers: {}

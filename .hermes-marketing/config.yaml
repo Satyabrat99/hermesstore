@@ -1,0 +1,24 @@
+# HermesStore — Marketing Profile
+model:
+  provider: xiaomi
+  model: mimo-v2.5-pro
+terminal:
+  cwd: C:\Users\satya\HermesStore
+api_server:
+  enabled: true
+  key: hermesstore-marketing-2026-secret-32c
+  port: 8644
+  host: 127.0.0.1
+tools:
+  - terminal
+  - read_file
+  - write_file
+  - search_files
+  - web_search
+  - web_extract
+  - browser_navigate
+  - browser_click
+  - browser_type
+  - browser_snapshot
+  - image_generate
+mcp_servers: {}
