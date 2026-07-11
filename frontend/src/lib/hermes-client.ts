@@ -1,7 +1,7 @@
 // Use the Next.js API route proxy (/api/hermes/*) which strips the Origin header
 // to avoid 403 from the Hermes gateway.
 const BASE = "/api/hermes";
-const HERMES_KEY = process.env.NEXT_PUBLIC_HERMES_KEY || "hermesstore-app-2026-secret-key-32c";
+const HERMES_KEY = process.env.NEXT_PUBLIC_HERMES_KEY || "hermesstore-brain-2026-secret-key-32c";
 
 export interface Message {
   id: string;
