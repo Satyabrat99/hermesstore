@@ -46,3 +46,27 @@ export interface SocialPost {
   comments?: number;
   shares?: number;
 }
+
+export interface Agent {
+  id: string;
+  name: string;
+  department: "storeops" | "marketing" | "customer-brand" | "brain";
+  type: "cron" | "ondemand";
+  status: "active" | "idle" | "running" | "error" | "paused";
+  schedule?: string;
+  lastRun?: string;
+  nextRun?: string;
+  runsToday: number;
+  tokensUsed: number;
+  description: string;
+}
+
+export interface AgentLog {
+  id: string;
+  agentId: string;
+  agentName: string;
+  action: string;
+  result: "success" | "error" | "warning";
+  timestamp: string;
+  details?: string;
+}

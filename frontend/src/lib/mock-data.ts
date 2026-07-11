@@ -1,4 +1,4 @@
-import { Product, Order, Campaign, SocialPost } from "./types";
+import { Product, Order, Campaign, SocialPost, Agent, AgentLog } from "./types";
 
 export const mockProducts: Product[] = [
   {
@@ -200,4 +200,66 @@ export const mockSocialPosts: SocialPost[] = [
     content: "We're hiring! Looking for a growth marketer to join our team. DM for details.",
     status: "draft",
   },
+];
+
+export const mockAgents: Agent[] = [
+  {
+    id: "1", name: "Product Lister", department: "storeops", type: "ondemand",
+    status: "idle", runsToday: 3, tokensUsed: 12500,
+    description: "Creates products from voice, image, or text input",
+  },
+  {
+    id: "2", name: "Pricing Strategist", department: "storeops", type: "ondemand",
+    status: "idle", runsToday: 2, tokensUsed: 8900,
+    description: "Analyzes competitors and recommends pricing",
+  },
+  {
+    id: "3", name: "Inventory Tracker", department: "storeops", type: "cron",
+    status: "active", schedule: "Every 6h", lastRun: "12:00 PM", nextRun: "6:00 PM",
+    runsToday: 2, tokensUsed: 4200,
+    description: "Monitors stock levels and predicts stockouts",
+  },
+  {
+    id: "4", name: "Social Media Manager", department: "marketing", type: "ondemand",
+    status: "idle", runsToday: 1, tokensUsed: 6700,
+    description: "Generates and schedules social media posts",
+  },
+  {
+    id: "5", name: "Content Creator", department: "marketing", type: "ondemand",
+    status: "running", runsToday: 2, tokensUsed: 15200,
+    description: "Generates product images, carousels, and graphics",
+  },
+  {
+    id: "6", name: "Engagement Responder", department: "marketing", type: "cron",
+    status: "active", schedule: "Every 30m", lastRun: "2:30 PM", nextRun: "3:00 PM",
+    runsToday: 12, tokensUsed: 8400,
+    description: "Monitors and replies to comments and DMs",
+  },
+  {
+    id: "7", name: "Support Agent", department: "customer-brand", type: "cron",
+    status: "active", schedule: "Every 15m", lastRun: "2:45 PM", nextRun: "3:00 PM",
+    runsToday: 24, tokensUsed: 18600,
+    description: "Handles customer queries and drafts responses",
+  },
+  {
+    id: "8", name: "Brand Guardian", department: "customer-brand", type: "ondemand",
+    status: "active", runsToday: 5, tokensUsed: 3200,
+    description: "Enforces brand voice across all content",
+  },
+  {
+    id: "9", name: "Competitor Monitor", department: "storeops", type: "cron",
+    status: "paused", schedule: "Every 2h", lastRun: "10:00 AM", nextRun: "Paused",
+    runsToday: 0, tokensUsed: 0,
+    description: "Tracks competitor prices and products",
+  },
+];
+
+export const mockAgentLogs: AgentLog[] = [
+  { id: "1", agentId: "3", agentName: "Inventory Tracker", action: "Checked 8 products. 1 low stock alert.", result: "warning", timestamp: "2:30 PM", details: "SKU-1234 has 12 units remaining" },
+  { id: "2", agentId: "7", agentName: "Support Agent", action: "Auto-resolved 3 tickets (order status queries)", result: "success", timestamp: "2:15 PM" },
+  { id: "3", agentId: "5", agentName: "Content Creator", action: "Generating Instagram carousel for Summer Sale", result: "success", timestamp: "2:00 PM" },
+  { id: "4", agentId: "6", agentName: "Engagement Responder", action: "Replied to 5 Instagram comments", result: "success", timestamp: "1:30 PM" },
+  { id: "5", agentId: "2", agentName: "Pricing Strategist", action: "Recommended price drop for 3 products", result: "success", timestamp: "1:00 PM" },
+  { id: "6", agentId: "1", agentName: "Product Lister", action: "Created product: Nike Air Max 90", result: "success", timestamp: "12:30 PM" },
+  { id: "7", agentId: "9", agentName: "Competitor Monitor", action: "Connection timeout — paused", result: "error", timestamp: "10:00 AM", details: "Failed to reach competitor URL after 3 retries" },
 ];
