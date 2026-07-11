@@ -38,6 +38,7 @@ AI-powered ecommerce store manager. One chat interface controls an entire Shopif
 - [x] PROMPT-7 polish — DONE (2026-07-11). DepartmentCard (Fulfillment/Finance/Analytics "Coming Soon"). Build passes.
 - [x] PROMPT-8 settings — DONE (2026-07-11). ApprovalDialog, /settings page, sidebar nav updated. Build passes.
 - [x] PROMPT-9 skills — DONE (2026-07-11). 5 Hermes skill markdown files (product, pricing, landing, support, brand).
+- [x] PROMPT-10 scripts — DONE (2026-07-11). setup-profiles.sh, start-gateways.sh, test-e2e.sh.
 - [ ] Products
 - [ ] Marketing
 - [ ] Agents
