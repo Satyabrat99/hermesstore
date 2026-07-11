@@ -1,9 +1,7 @@
-const HERMES_URL = process.env.NEXT_PUBLIC_HERMES_URL || "http://localhost:8642";
+// Always use the Next.js proxy (/hermes/*) to avoid browser CORS.
+// The proxy rewrites /hermes/:path* -> http://localhost:8642/:path*.
+const BASE = "/hermes";
 const HERMES_KEY = process.env.NEXT_PUBLIC_HERMES_KEY || "hermesstore-app-2026-secret-key-32c";
-
-// In dev, requests go through the Next.js rewrite proxy (/hermes/*) to avoid CORS.
-// In production with a public Hermes URL, NEXT_PUBLIC_HERMES_URL can be set directly.
-const BASE = process.env.NODE_ENV === "development" ? "/hermes" : HERMES_URL;
 
 export interface Message {
   id: string;
@@ -40,7 +38,8 @@ export async function chat(
   });
 
   if (!response.ok) {
-    throw new Error(`Hermes API error: ${response.status}`);
+    const body = await response.text().catch(() => "");
+    throw new Error(`Hermes API error ${response.status}: ${body.slice(0, 200)}`);
   }
 
   const reader = response.body!.getReader();

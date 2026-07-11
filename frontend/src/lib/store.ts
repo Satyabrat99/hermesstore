@@ -1,6 +1,8 @@
 import { create } from "zustand";
 import { Message, chat, healthCheck } from "./hermes-client";
 
+let msgCounter = 0;
+
 interface ChatState {
   messages: Message[];
   isLoading: boolean;
@@ -21,36 +23,38 @@ export const useChatStore = create<ChatState>((set, get) => ({
 
   sendMessage: async (content) => {
     const userMsg: Message = {
-      id: Date.now().toString(),
+      id: `user-${++msgCounter}`,
       role: "user",
       content,
       timestamp: new Date(),
     };
-    set((state) => ({
-      messages: [...state.messages, userMsg],
-      isLoading: true,
-    }));
 
+    const assistantId = `assistant-${++msgCounter}`;
     const assistantMsg: Message = {
-      id: (Date.now() + 1).toString(),
+      id: assistantId,
       role: "assistant",
       content: "",
       timestamp: new Date(),
     };
+
+    // Add both messages atomically
     set((state) => ({
-      messages: [...state.messages, assistantMsg],
+      messages: [...state.messages, userMsg, assistantMsg],
+      isLoading: true,
     }));
 
     try {
-      const allMessages = get().messages.map((m) => ({
-        role: m.role,
-        content: m.content,
-      }));
+      const allMessages = get().messages
+        .filter((m) => m.content !== "")
+        .map((m) => ({
+          role: m.role,
+          content: m.content,
+        }));
 
       await chat(allMessages, (token) => {
         set((state) => ({
           messages: state.messages.map((m) =>
-            m.id === assistantMsg.id
+            m.id === assistantId
               ? { ...m, content: m.content + token }
               : m
           ),
@@ -59,10 +63,10 @@ export const useChatStore = create<ChatState>((set, get) => ({
     } catch (err) {
       set((state) => ({
         messages: state.messages.map((m) =>
-          m.id === assistantMsg.id
+          m.id === assistantId
             ? {
                 ...m,
-                content: `Error: ${err instanceof Error ? err.message : "Connection failed"}`,
+                content: m.content || `Error: ${err instanceof Error ? err.message : "Connection failed"}`,
               }
             : m
         ),
