@@ -30,7 +30,7 @@ AI-powered ecommerce store manager. One chat interface controls an entire Shopif
 
 ## Status
 - [x] PROMPT-1 scaffold — DONE (2026-07-11). Production build passes. Dev server has CSS issue (see known issues).
-- [ ] Dashboard
+- [x] PROMPT-2 dashboard — DONE (2026-07-11). MetricCards, AgentActivity, AlertsPanel, QuickActions. Build passes.
 - [ ] Products
 - [ ] Marketing
 - [ ] Agents
