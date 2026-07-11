@@ -43,6 +43,7 @@ AI-powered ecommerce store manager. One chat interface controls an entire Shopif
 - [x] Chat fix — DONE (2026-07-11). CORS proxy fix, unique IDs, streaming verified. Build passes.
 - [x] Chat 403 fix — DONE (2026-07-11). API route proxy strips Origin header, streaming works through browser.
 - [x] PROMPT-11 agents — DONE (2026-07-11). Functional agent management: start/stop, SOUL.md editor, live status polling, activity logs.
+- [x] PROMPT-12 cron — DONE (2026-07-11). Cron management: list/create/pause/resume/run/delete jobs across 4 agents.
 - [ ] Products
 - [ ] Marketing
 - [ ] Agents

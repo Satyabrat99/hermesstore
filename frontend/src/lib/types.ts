@@ -89,3 +89,24 @@ export interface LogEntry {
   level: "info" | "warn" | "error";
   agent?: string;
 }
+
+export interface CronJob {
+  id: string;
+  name: string;
+  schedule: string;
+  prompt: string;
+  status: "active" | "paused" | "running" | "error";
+  department: string;
+  lastRun?: string;
+  nextRun?: string;
+  runsToday: number;
+  lastResult?: string;
+  createdAt: string;
+}
+
+export interface CronJobCreate {
+  name: string;
+  schedule: string;
+  prompt: string;
+  department: string;
+}
