@@ -1,48 +1,108 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
-import { TrendingUp, TrendingDown, IndianRupee, ShoppingCart, Users, Percent } from "lucide-react";
+import { IndianRupee, ShoppingCart, Package, Users, AlertCircle } from "lucide-react";
 
 interface Metric {
   label: string;
   value: string;
-  change: string;
-  trend: "up" | "down";
+  sub: string;
   icon: React.ReactNode;
 }
 
-const metrics: Metric[] = [
-  {
-    label: "Revenue",
-    value: "₹1,24,500",
-    change: "+12.5%",
-    trend: "up",
-    icon: <IndianRupee className="w-5 h-5" />,
-  },
-  {
-    label: "Orders",
-    value: "47",
-    change: "+8.2%",
-    trend: "up",
-    icon: <ShoppingCart className="w-5 h-5" />,
-  },
-  {
-    label: "Conversion",
-    value: "3.2%",
-    change: "-0.3%",
-    trend: "down",
-    icon: <Percent className="w-5 h-5" />,
-  },
-  {
-    label: "Visitors",
-    value: "1,470",
-    change: "+15.1%",
-    trend: "up",
-    icon: <Users className="w-5 h-5" />,
-  },
-];
+interface MetricsState {
+  products: number;
+  orders: number;
+  revenue: number;
+  error: string | null;
+  loading: boolean;
+}
 
 export function MetricCards() {
+  const [state, setState] = useState<MetricsState>({
+    products: 0,
+    orders: 0,
+    revenue: 0,
+    error: null,
+    loading: true,
+  });
+
+  useEffect(() => {
+    const load = async () => {
+      try {
+        const [prodRes, orderRes] = await Promise.all([
+          fetch("/api/shopify?endpoint=products.json&limit=250", { cache: "no-store" }),
+          fetch("/api/shopify?endpoint=orders.json&limit=50&status=any", { cache: "no-store" }),
+        ]);
+
+        if (!prodRes.ok) throw new Error("Shopify products request failed");
+
+        const prodData = await prodRes.json();
+        const products = prodData.products?.length ?? 0;
+
+        let orders = 0;
+        let revenue = 0;
+        if (orderRes.ok) {
+          const orderData = await orderRes.json();
+          const ordersArr = orderData.orders ?? [];
+          orders = ordersArr.length;
+          revenue = ordersArr.reduce(
+            (sum: number, o: { total_price?: string }) => sum + (parseFloat(o.total_price ?? "0") || 0),
+            0
+          );
+        }
+
+        setState({ products, orders, revenue, error: null, loading: false });
+      } catch (err: unknown) {
+        const message = err instanceof Error ? err.message : "Failed to load Shopify data";
+        setState((s) => ({ ...s, error: message, loading: false }));
+      }
+    };
+    load();
+  }, []);
+
+  if (state.error) {
+    return (
+      <Card className="bg-red-500/5 border-red-500/30 rounded-2xl p-4">
+        <div className="flex items-center gap-2 text-red-400 text-sm">
+          <AlertCircle className="w-4 h-4" />
+          Could not reach Shopify — {state.error}. Connect Shopify in Settings.
+        </div>
+      </Card>
+    );
+  }
+
+  const inr = (n: number) =>
+    "₹" + Math.round(n).toLocaleString("en-IN");
+
+  const metrics: Metric[] = [
+    {
+      label: "Revenue",
+      value: state.loading ? "…" : inr(state.revenue),
+      sub: "from real orders",
+      icon: <IndianRupee className="w-5 h-5" />,
+    },
+    {
+      label: "Orders",
+      value: state.loading ? "…" : String(state.orders),
+      sub: "real Shopify orders",
+      icon: <ShoppingCart className="w-5 h-5" />,
+    },
+    {
+      label: "Products",
+      value: state.loading ? "…" : String(state.products),
+      sub: "live in store",
+      icon: <Package className="w-5 h-5" />,
+    },
+    {
+      label: "Avg. Order",
+      value: state.loading ? "…" : inr(state.orders ? state.revenue / state.orders : 0),
+      sub: "per order",
+      icon: <Users className="w-5 h-5" />,
+    },
+  ];
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       {metrics.map((metric) => (
@@ -52,20 +112,7 @@ export function MetricCards() {
             <span className="text-smoke">{metric.icon}</span>
           </div>
           <div className="text-2xl font-medium text-snow">{metric.value}</div>
-          <div className="flex items-center gap-1 mt-1">
-            {metric.trend === "up" ? (
-              <TrendingUp className="w-3 h-3 text-phosphor" />
-            ) : (
-              <TrendingDown className="w-3 h-3 text-red-500" />
-            )}
-            <span
-              className={`text-xs ${
-                metric.trend === "up" ? "text-phosphor" : "text-red-500"
-              }`}
-            >
-              {metric.change} vs last week
-            </span>
-          </div>
+          <div className="text-xs text-smoke mt-1">{metric.sub}</div>
         </Card>
       ))}
     </div>
