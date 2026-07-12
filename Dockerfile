@@ -2,9 +2,8 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Install hermes-agent
-COPY hermes-agent/ /app/hermes-agent/
-RUN cd /app/hermes-agent && pip install -e . --no-cache-dir
+# Install hermes-agent from GitHub
+RUN pip install --no-cache-dir git+https://github.com/NousResearch/hermes-agent.git
 
 # Copy profile configs
 COPY .hermes-brain/ /app/.hermes-brain/
