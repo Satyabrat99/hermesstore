@@ -55,3 +55,7 @@ next.log
 # OS
 .DS_Store
 Thumbs.db
+.hermes*/.env
+ALL-CONFIGS.md
+frontend/src/app/api/shopify/route.ts
+prompts/PROMPT-16-real-shopify.md
