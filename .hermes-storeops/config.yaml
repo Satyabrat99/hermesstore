@@ -2,12 +2,12 @@ model:
   provider: xiaomi
   model: mimo-v2.5-pro
 terminal:
-  cwd: C:\Users\satya\HermesStore
+  cwd: /app
 api_server:
   enabled: true
   key: hermesstore-storeops-2026-secret-32c
-  port: 8643
-  host: 127.0.0.1
+  port: 8642
+  host: 0.0.0.0
 tools:
   - terminal
   - read_file
@@ -20,7 +20,13 @@ tools:
   - browser_type
   - browser_snapshot
   - image_generate
-mcp_servers: {}
-
-web:
-  search_backend: "exa"
+mcp_servers:
+  shopify:
+    command: npx
+    args:
+      - '@den.dance/shopify-mcp-pro'
+    env:
+      SHOPIFY_STORE_DOMAIN: hermes-mystore.myshopify.com
+      SHOPIFY_CLIENT_ID: ' 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'
+      SHOPIFY_CLIENT_SECRET: ' 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'
+      SHOPIFY_API_VERSION: 2026-04
