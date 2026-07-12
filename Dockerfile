@@ -8,6 +8,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends git && rm -rf /
 # Install hermes-agent from GitHub
 RUN pip install --no-cache-dir git+https://github.com/NousResearch/hermes-agent.git
 
+# Install API server dependencies
+RUN pip install --no-cache-dir aiohttp
+
 # Copy profile configs
 COPY .hermes-brain/ /app/.hermes-brain/
 COPY .hermes-storeops/ /app/.hermes-storeops/
